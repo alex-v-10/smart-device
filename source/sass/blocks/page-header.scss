@@ -1,0 +1,126 @@
+.page-header {
+  position: fixed;
+  width: 100%;
+  color: $alice-blue;
+  background: linear-gradient(180deg, $black-pearl 84.9%, rgba(4, 24, 39, 0) 100%);
+}
+
+.page-header__container {
+  padding-bottom: 35px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include vp-1023 {
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 20px;
+  }
+}
+
+.page-header__logo {
+  margin-top: 30px;
+  color: inherit;
+
+  @include vp-1023 {
+    margin-top: 20px;
+  }
+
+  @include vp-767 {
+    margin-top: 15px;
+
+    & .logo__icon {
+      width: 35px;
+      height: 35px;
+    }
+
+    & .logo__text {
+      @include visually-hidden;
+    }
+  }
+}
+
+.page-header__list {
+  margin: 45px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+
+  @include vp-1023 {
+    margin: 20px 20px 0 0;
+  }
+
+  @include vp-767 {
+    margin: 10px 10px 0 0;
+  }
+}
+
+.page-header__item {
+  min-width: 225px;
+
+  @include vp-1023 {
+    min-width: auto;
+  }
+
+  &:not(:last-child) {
+    margin-right: 30px;
+
+    @include vp-1023 {
+      margin-right: 20px;
+    }
+  }
+}
+
+.page-header__link {
+  line-height: 18px;
+  color: inherit;
+  display: flex;
+  align-items: center;
+
+  @include vp-1023 {
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.page-header__link-icon {
+  margin-right: 15px;
+
+  @include vp-1023 {
+    margin-right: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.page-header__link-text {
+  @include vp-1023 {
+    @include visually-hidden;
+  }
+}
+
+.page-header__button {
+  margin: 35px 0 0;
+  padding: 10px 15px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid $alice-blue;
+  border-radius: 3px;
+  cursor: pointer;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
