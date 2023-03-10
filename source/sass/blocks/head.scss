@@ -98,6 +98,15 @@
     font-size: 14px;
     line-height: 16px;
   }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $cerulean;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .head__link-text {

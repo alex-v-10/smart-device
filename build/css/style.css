@@ -1328,6 +1328,15 @@ button,
   color: inherit;
 }
 
+.page-header__logo:hover,
+.page-header__logo:focus-visible {
+  opacity: 0.8;
+}
+
+.page-header__logo:active {
+  opacity: 0.6;
+}
+
 .page-header__list {
   margin: 45px 0 0;
   padding: 0;
@@ -1356,6 +1365,15 @@ button,
   align-items: center;
 }
 
+.page-header__link:hover,
+.page-header__link:focus-visible {
+  opacity: 0.8;
+}
+
+.page-header__link:active {
+  opacity: 0.6;
+}
+
 .page-header__link-icon {
   margin-right: 15px;
 }
@@ -1375,6 +1393,15 @@ button,
   border: 1px solid #f2f5f7;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.page-header__button:hover:not(:active),
+.page-header__button:focus-visible {
+  opacity: 0.8;
+}
+
+.page-header__button:active {
+  opacity: 0.6;
 }
 
 .head {
@@ -1436,6 +1463,15 @@ button,
   border-radius: 3px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.head__link:hover,
+.head__link:focus-visible {
+  background-color: #026593;
+}
+
+.head__link:active {
+  opacity: 0.6;
 }
 
 .head__link-text {

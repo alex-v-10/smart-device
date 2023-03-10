@@ -40,6 +40,15 @@
       @include visually-hidden;
     }
   }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__list {
@@ -84,6 +93,15 @@
     width: 40px;
     height: 40px;
   }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__link-icon {
@@ -122,5 +140,14 @@
 
   @include vp-1023 {
     display: none;
+  }
+
+  &:hover:not(:active),
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
