@@ -7,6 +7,11 @@
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
 
+  font-family: $ff-pt-mono;
+  line-height: 21.5px;
+  color: $black-pearl;
+  background-color: $alice-blue-2;
+
   .header,
   .footer {
     flex-shrink: 0;
@@ -68,4 +73,20 @@
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
+}
+
+.hidden-on-mobile {
+  display: block;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.visible-on-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
 }
