@@ -572,7 +572,7 @@ button,
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
   font-family: "PT Mono", "Arial", sans-serif;
-  line-height: 21.5px;
+  line-height: 22px;
   color: #041827;
   background-color: #f8fdff;
 }
@@ -1304,6 +1304,7 @@ button,
 .page-header {
   position: fixed;
   width: 100%;
+  z-index: 1000;
   color: #f2f5f7;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -1326,15 +1327,6 @@ button,
 .page-header__logo {
   margin-top: 30px;
   color: inherit;
-}
-
-.page-header__logo:hover,
-.page-header__logo:focus-visible {
-  opacity: 0.8;
-}
-
-.page-header__logo:active {
-  opacity: 0.6;
 }
 
 .page-header__list {
@@ -1467,15 +1459,15 @@ button,
 
 .head__link:hover,
 .head__link:focus-visible {
-  background-color: #026593;
+  background-color: #019bdf;
 }
 
 .head__link:active {
-  opacity: 0.6;
+  background-color: #026593;
 }
 
 .head__link-text {
-  display: block;
+  display: inline;
 }
 
 .head__link-text--mobile {
@@ -1486,6 +1478,15 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.logo:hover,
+.logo:focus-visible {
+  opacity: 0.8;
+}
+
+.logo:active {
+  opacity: 0.6;
 }
 
 .logo__text {
@@ -1548,10 +1549,87 @@ button,
 .advantages__title {
   margin: 0 0 15px;
   color: #00b2ff;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 34px;
 }
 
 .advantages__description {
   margin: 0;
+}
+
+.about {
+  padding-bottom: 100px;
+}
+
+.about__container {
+  padding: 5px 0 0 250px;
+  position: relative;
+}
+
+.about__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 320px;
+  background: url("../../img/about/2022.png") no-repeat;
+}
+
+.about__content {
+  margin-bottom: 40px;
+}
+
+.about__content h2 {
+  margin: 0 0 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.about__content p {
+  margin: 0;
+}
+
+.about__content p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.about__button {
+  min-width: 155px;
+  margin: 0;
+  padding: 14px 13px;
+  color: #00b2ff;
+  background: transparent;
+  border: 1px solid #00b2ff;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.about__button:hover,
+.about__button:focus-visible {
+  color: #f2f5f7;
+  background-color: #00b2ff;
+}
+
+.about__button:active {
+  color: #f2f5f7;
+  background-color: #026593;
+}
+
+.about__button-text {
+  display: none;
+}
+
+.about__button-text--opened {
+  display: inline;
 }
 
 /* @mixin hover-focus {
@@ -1677,6 +1755,18 @@ button,
   .advantages {
     padding: 80px 0;
   }
+
+  .about {
+    padding-bottom: 80px;
+  }
+
+  .about__container {
+    padding: 0 0 0 180px;
+  }
+
+  .about__content {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
@@ -1759,7 +1849,7 @@ button,
   }
 
   .head__link-text--mobile {
-    display: block;
+    display: inline;
   }
 
   .advantages {
@@ -1773,6 +1863,39 @@ button,
 
   .advantages__item {
     padding: 30px 25px 35px;
+  }
+
+  .advantages__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .advantages__title {
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .advantages__description {
+    font-size: 14px;
+    line-height: 135%;
+  }
+
+  .about__container {
+    padding: 0;
+  }
+
+  .about__container::before {
+    display: none;
+  }
+
+  .about__content h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about__content p {
+    font-size: 14px;
+    line-height: 19px;
   }
 }
 
@@ -1856,5 +1979,9 @@ button,
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .head {
     background-image: url("../../img/head/head@2x.jpg");
+  }
+
+  .about__container::before {
+    background-image: url("../../img/about/2022@2x.png");
   }
 }

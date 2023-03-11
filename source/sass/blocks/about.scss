@@ -1,0 +1,107 @@
+.about {
+  padding-bottom: 100px;
+
+  @include vp-1023 {
+    padding-bottom: 80px;
+  }
+}
+
+.about__container {
+  padding: 5px 0 0 250px;
+  position: relative;
+
+  @include vp-1023 {
+    padding: 0 0 0 180px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 320px;
+    background: url("../../img/about/2022.png") no-repeat;
+
+    @include retina {
+      background-image: url("../../img/about/2022@2x.png");
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.about__content {
+  margin-bottom: 40px;
+
+  @include vp-1023 {
+    margin-bottom: 20px;
+  }
+}
+
+.about__content h2 {
+  margin: 0 0 15px;
+  font-family: $ff-roboto-condensed;
+  font-size: 36px;
+  line-height: 51px;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about__content p {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about__button {
+  min-width: 155px;
+  margin: 0;
+  padding: 14px 13px;
+  color: $deep-sky-blue;
+  background: transparent;
+  border: 1px solid $deep-sky-blue;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    color: $alice-blue;
+    background-color: $deep-sky-blue;
+  }
+
+  &:active {
+    color: $alice-blue;
+    background-color: $cerulean;
+  }
+}
+
+.about__button-text {
+  display: none;
+
+  &--opened {
+    display: inline;
+  }
+}

@@ -101,16 +101,16 @@
 
   &:hover,
   &:focus-visible {
-    background-color: $cerulean;
+    background-color: $pacific-blue;
   }
 
   &:active {
-    opacity: 0.6;
+    background-color: $cerulean;
   }
 }
 
 .head__link-text {
-  display: block;
+  display: inline;
 
   &--mobile {
     display: none;
@@ -120,7 +120,7 @@
     display: none;
 
     &--mobile {
-      display: block;
+      display: inline;
     }
   }
 }
