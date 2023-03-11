@@ -74,3 +74,20 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+//display
+
+.display-desktop {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+
+.display-tablet-mobile {
+  display: none;
+
+  @include vp-1023 {
+    display: inline;
+  }
+}

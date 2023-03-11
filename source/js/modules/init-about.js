@@ -2,6 +2,7 @@
 
 const button = document.querySelector('.about__button');
 const container = document.querySelector('.about__container');
+container.classList.add('about__container--closed');
 
 const onButtonClick = () => {
   container.classList.toggle('about__container--closed');

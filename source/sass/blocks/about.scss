@@ -50,6 +50,7 @@
   font-family: $ff-roboto-condensed;
   font-size: 36px;
   line-height: 51px;
+  font-weight: 400;
 
   @include vp-767 {
     font-size: 28px;
