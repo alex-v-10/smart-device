@@ -68,10 +68,19 @@
     font-size: 14px;
     line-height: 19px;
   }
+
+  .about__container--closed & {
+    display: none;
+
+    &:first-of-type,
+    &:nth-of-type(2) {
+      display: block;
+    }
+  }
 }
 
 .about__button {
-  min-width: 155px;
+  min-width: 180px;
   margin: 0;
   padding: 14px 13px;
   color: $deep-sky-blue;
@@ -99,9 +108,15 @@
 }
 
 .about__button-text {
-  display: none;
+  &--closed {
+    display: none;
+  }
 
-  &--opened {
-    display: inline;
+  .about__container--closed & {
+    display: none;
+
+    &--closed {
+      display: inline;
+    }
   }
 }

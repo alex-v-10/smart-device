@@ -1596,8 +1596,17 @@ button,
   margin-bottom: 20px;
 }
 
+.about__container--closed .about__content p {
+  display: none;
+}
+
+.about__container--closed .about__content p:first-of-type,
+.about__container--closed .about__content p:nth-of-type(2) {
+  display: block;
+}
+
 .about__button {
-  min-width: 155px;
+  min-width: 180px;
   margin: 0;
   padding: 14px 13px;
   color: #00b2ff;
@@ -1624,11 +1633,15 @@ button,
   background-color: #026593;
 }
 
-.about__button-text {
+.about__button-text--closed {
   display: none;
 }
 
-.about__button-text--opened {
+.about__container--closed .about__button-text {
+  display: none;
+}
+
+.about__container--closed .about__button-text--closed {
   display: inline;
 }
 
