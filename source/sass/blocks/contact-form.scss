@@ -4,6 +4,16 @@
   background: linear-gradient(90deg, $cerulean 0 50%, $deep-sky-blue 50% 100%);
   overflow: hidden;
 
+  @include vp-1023 {
+    padding: 50px 0 125px;
+    min-height: auto;
+    background: $deep-sky-blue;
+  }
+
+  @include vp-767 {
+    padding: 50px 0 90px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -19,6 +29,10 @@
       right: -300px;
       transform: translateX(0);
     }
+
+    @include vp-1023 {
+      display: none;
+    }
   }
 }
 
@@ -30,6 +44,11 @@
   width: 580px;
   min-height: 420px;
   color: $color-default-white;
+
+  @include vp-1023 {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .contact-form__title {
@@ -38,10 +57,20 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 42px;
+  }
 }
 
 .contact-form__description {
   margin: 0 0 35px;
   font-size: 16px;
   line-height: 22px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
