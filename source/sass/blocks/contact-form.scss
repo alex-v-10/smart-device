@@ -1,0 +1,28 @@
+.contact-form {
+  position: relative;
+  min-height: 840px;
+  background: linear-gradient(90deg, $cerulean 0 50%, $deep-sky-blue 50% 100%);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: $vp-1920;
+    height: 100%;
+    background:url("../../img/svg/plane.svg") 350px 246px/510px 285px no-repeat,
+      linear-gradient(139deg, $cerulean 0 633px, $deep-sky-blue 633px 100%);
+
+    @include vp-1919 {
+      right: 0;
+      transform: translateX(0);
+    }
+  }
+}
+
+// .contact-form__container {
+//   width: $vp-1920;
+//   min-height: 840px;
+// }

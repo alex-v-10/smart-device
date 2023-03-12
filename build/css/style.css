@@ -1736,6 +1736,29 @@ button,
   background: url("../../img/catalog/catalog-3-desktop.jpg") center/cover no-repeat, #026593;
 }
 
+.contact-form {
+  position: relative;
+  min-height: 840px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #026593), color-stop(50%, #00b2ff));
+  background: -o-linear-gradient(left, #026593 0 50%, #00b2ff 50% 100%);
+  background: linear-gradient(90deg, #026593 0 50%, #00b2ff 50% 100%);
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+  width: 1920px;
+  height: 100%;
+  background: url("../../img/svg/plane.svg") 350px 246px/510px 285px no-repeat, -o-linear-gradient(311deg, #026593 0 633px, #00b2ff 633px 100%);
+  background: url("../../img/svg/plane.svg") 350px 246px/510px 285px no-repeat, linear-gradient(139deg, #026593 0 633px, #00b2ff 633px 100%);
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1794,6 +1817,15 @@ button,
 
   .catalog__card--3 {
     background: url("../../img/catalog/catalog-3-desktop@2x.jpg") center/cover no-repeat, #026593;
+  }
+}
+
+@media (max-width: 1919px) {
+  .contact-form::before {
+    right: 0;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
