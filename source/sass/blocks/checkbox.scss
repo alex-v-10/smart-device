@@ -1,0 +1,39 @@
+.checkbox {
+  position: relative;
+  display: block;
+  padding-left: 25px;
+}
+
+.checkbox__mark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+}
+
+.checkbox input:checked ~ .checkbox__mark::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 32%;
+  transform: rotate(45deg);
+  width: 4px;
+  height: 6px;
+  border-bottom: 1px solid $color-default-white;
+  border-right: 1px solid $color-default-white;
+}
+
+.checkbox input {
+  @include visually-hidden;
+}
+
+.checkbox input + span {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.8;
+}

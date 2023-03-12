@@ -83,14 +83,14 @@
 .about__button {
   min-width: 180px;
   margin: 0;
-  padding: 14px 13px;
+  padding: 0 13px;
   color: $deep-sky-blue;
   background: transparent;
   border: 1px solid $deep-sky-blue;
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 45px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: 3px;
@@ -105,6 +105,11 @@
   &:active {
     color: $alice-blue;
     background-color: $cerulean;
+  }
+
+  @include vp-767 {
+    min-width: 130px;
+    line-height: 35px;
   }
 }
 
