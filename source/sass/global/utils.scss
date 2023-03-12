@@ -7,11 +7,6 @@
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
 
-  font-family: $ff-pt-mono;
-  line-height: 22px;
-  color: $black-pearl;
-  background-color: $alice-blue-2;
-
   .header,
   .footer {
     flex-shrink: 0;

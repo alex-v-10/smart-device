@@ -18,13 +18,15 @@
   <div class="wrapper">
     <header class="page-header">
       <div class="page-header__container container">
-        <a class="page-header__logo logo" href="#">
-          <svg class="logo__icon" width="55" height="55" aria-hidden="true" focusable="false">
-            <use xlink:href="img/sprite.svg#logo-brain"></use>
-          </svg>
-          <div class="logo__text">
-            <h2 class="logo__title">Smart Device</h2>
-            <p class="logo__description">умные технологии</p>
+        <a class="page-header__logo" href="#">
+          <div class="logo">
+            <svg class="logo__icon" width="55" height="55" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#logo-brain"></use>
+            </svg>
+            <div class="logo__text">
+              <h2 class="logo__title">Smart Device</h2>
+              <p class="logo__description">умные технологии</p>
+            </div>
           </div>
         </a>
         <ul class="page-header__list">
@@ -45,7 +47,7 @@
             </a>
           </li>
         </ul>
-        <button class="page-header__button" type="button">Заказать звонок</button>
+        <button class="page-header__button" type="button" data-open-modal="feedback">Заказать звонок</button>
       </div>
     </header>
 
@@ -171,9 +173,9 @@
       <section class="contact-form">
         <div class="container">
           <div class="contact-form__container">
-            <h2 class="contact-form__title">Остались вопросы? Задайте&nbsp;их&nbsp;нам!</h2>
-            <p class="contact-form__description">Мы проконсультируем Вас бесплатно</p>
             <div class="form form--static">
+              <h2 class="form__title">Остались вопросы? Задайте&nbsp;их&nbsp;нам!</h2>
+              <p class="form__description">Мы проконсультируем Вас бесплатно</p>
               <form action="https://echo.htmlacademy.ru/" method="post">
                 <div class="form__grid">
                   <div class="form__item">
@@ -181,8 +183,8 @@
                     <input type="text" name="name" id="name" placeholder="Имя">
                   </div>
                   <div class="form__item">
-                    <label class="visually-hidden" for="phone">Имя</label>
-                    <input type="text" name="phone" id="phone" placeholder="Телефон">
+                    <label class="visually-hidden" for="phone">Телефон</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Телефон">
                   </div>
                   <div class="form__item form__item--textarea">
                     <label class="visually-hidden" for="question">Ваш вопрос</label>
@@ -210,6 +212,51 @@
     <footer>
       <div class="container">Footer</div>
     </footer>
+
+    <div class="modal modal--preload" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="20" height="20" fill="currentColor">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="form">
+            <h2 class="form__title">Закажите звонок</h2>
+            <p class="form__description">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <div class="form__grid">
+                <div class="form__item">
+                  <label class="visually-hidden" for="name">Имя</label>
+                  <input type="text" name="name" id="name" placeholder="Имя">
+                </div>
+                <div class="form__item">
+                  <label class="visually-hidden" for="phone">Телефон</label>
+                  <input type="tel" name="phone" id="phone" placeholder="Телефон">
+                </div>
+                <div class="form__item form__item--textarea">
+                  <label class="visually-hidden" for="question">Ваш вопрос</label>
+                  <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
+                </div>
+                <div class="form__item">
+                  <button type="submit">Задать вопрос</button>
+                </div>
+                <div class="form__item form__item--checkbox">
+                  <span class="checkbox">
+                    <label>
+                      <input type="checkbox" name="agree" checked>
+                      <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                      <span class="checkbox__mark"></span>
+                    </label>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

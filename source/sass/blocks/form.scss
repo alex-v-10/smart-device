@@ -1,3 +1,17 @@
+.form__title {
+  margin: 0 0 15px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.form__description {
+  margin: 0 0 40px;
+  font-size: 14px;
+  line-height: 19px;
+}
+
 .form__grid {
   display: grid;
   row-gap: 20px;
@@ -48,6 +62,17 @@
 
 .form--static {
   @media (min-width: $vp-768) {
+    .form__title {
+      font-size: 36px;
+      line-height: 51px;
+    }
+
+    .form__description {
+      margin: 0 0 35px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
     .form__grid {
       grid-template-columns: 1fr 1fr;
       row-gap: 20px;

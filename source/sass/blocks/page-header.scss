@@ -32,12 +32,12 @@
   @include vp-767 {
     margin-top: 15px;
 
-    & .logo__icon {
+    .logo__icon {
       width: 35px;
       height: 35px;
     }
 
-    & .logo__text {
+    .logo__text {
       @include visually-hidden;
     }
   }
@@ -101,10 +101,7 @@
 
   @include vp-1023 {
     margin-right: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
   }
 }
 
