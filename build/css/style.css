@@ -1292,11 +1292,14 @@ button,
 }
 
 .page-header {
-  padding-bottom: 35px;
   position: fixed;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   color: #f2f5f7;
+}
+
+.page-header__inner {
+  padding-bottom: 35px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -2016,7 +2019,7 @@ button,
     display: none;
   }
 
-  .page-header {
+  .page-header__inner {
     padding-bottom: 25px;
   }
 
@@ -2173,7 +2176,7 @@ button,
     padding: 60px 16px;
   }
 
-  .page-header {
+  .page-header__inner {
     padding-bottom: 20px;
   }
 
