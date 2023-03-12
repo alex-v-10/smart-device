@@ -66,7 +66,6 @@
   padding: 50px 40px;
   display: block;
   height: 650px;
-  background: center/cover no-repeat, $cerulean;
 
   @include vp-1023 {
     padding: 40px 45px;
@@ -118,74 +117,42 @@
   }
 }
 
-.catalog__card--1 {
-  background-image: url("../../img/catalog/catalog-1-desktop.jpg");
+/* Background for cards */
 
-  @include retina {
-    background-image: url("../../img/catalog/catalog-1-desktop@2x.jpg");
-  }
+$cards: 1, 2, 3;
 
-  @include vp-1023 {
-    background-image: url("../../img/catalog/catalog-1-tablet.jpg");
+@each $card in $cards {
+  $urlDesktop: "../../img/catalog/catalog-" + $card + "-desktop.jpg";
+  $urlDesktop2x: "../../img/catalog/catalog-" + $card + "-desktop@2x.jpg";
+  $urlTablet: "../../img/catalog/catalog-" + $card + "-tablet.jpg";
+  $urlTablet2x: "../../img/catalog/catalog-" + $card + "-tablet@2x.jpg";
+  $urlMobile: "../../img/catalog/catalog-" + $card + "-mobile.jpg";
+  $urlMobile2x: "../../img/catalog/catalog-" + $card + "-mobile@2x.jpg";
 
-    @include retina {
-      background-image: url("../../img/catalog/catalog-1-tablet@2x.jpg");
+  .catalog__card--#{$card} {
+    background: url($urlDesktop) center/cover no-repeat, $cerulean;
+
+    @include vp-1023 {
+      background: url($urlTablet) center/cover no-repeat, $cerulean;
     }
-  }
 
-  @include vp-374 {
-    background-image: url("../../img/catalog/catalog-1-mobile.jpg");
-
-    @include retina {
-      background-image: url("../../img/catalog/catalog-1-mobile@2x.jpg");
+    @include vp-374 {
+      background: url($urlMobile) center/cover no-repeat, $cerulean;
     }
-  }
-}
 
-.catalog__card--2 {
-  background-image: url("../../img/catalog/catalog-2-desktop.jpg");
-
-  @include retina {
-    background-image: url("../../img/catalog/catalog-2-desktop@2x.jpg");
-  }
-
-  @include vp-1023 {
-    background-image: url("../../img/catalog/catalog-2-tablet.jpg");
-
-    @include retina {
-      background-image: url("../../img/catalog/catalog-2-tablet@2x.jpg");
+    @media (min-resolution: $retina-dpi) and (min-width: $vp-1024),
+      (min-resolution: $retina-dppx) and (min-width: $vp-1024) {
+      background: url($urlDesktop2x) center/cover no-repeat, $cerulean;
     }
-  }
 
-  @include vp-374 {
-    background-image: url("../../img/catalog/catalog-2-mobile.jpg");
-
-    @include retina {
-      background-image: url("../../img/catalog/catalog-2-mobile@2x.jpg");
+    @media (min-resolution: $retina-dpi) and (min-width: $vp-375) and (max-width: ($vp-1024 - 1px)),
+      (min-resolution: $retina-dppx) and (min-width: $vp-375) and (max-width: ($vp-1024 - 1px)) {
+      background: url($urlTablet2x) center/cover no-repeat, $cerulean;
     }
-  }
-}
 
-.catalog__card--3 {
-  background-image: url("../../img/catalog/catalog-3-desktop.jpg");
-
-  @include retina {
-    background-image: url("../../img/catalog/catalog-3-desktop@2x.jpg");
-  }
-
-  @include vp-1023 {
-    background-image: url("../../img/catalog/catalog-3-tablet.jpg");
-
-    @include retina {
-      background-image: url("../../img/catalog/catalog-3-tablet@2x.jpg");
-    }
-  }
-
-  @include vp-374 {
-    background-image: url("../../img/catalog/catalog-3-mobile.jpg");
-
-    @include retina {
-      background-image: url("../../img/catalog/catalog-3-mobile@2x.jpg");
+    @media (min-resolution: $retina-dpi) and (max-width: ($vp-375 - 1px)),
+      (min-resolution: $retina-dppx) and (max-width: ($vp-375 - 1px)) {
+      background: url($urlMobile2x) center/cover no-repeat, $cerulean;
     }
   }
 }

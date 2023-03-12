@@ -4,18 +4,24 @@
     url("../../img/head/head.jpg") center/cover no-repeat,
     $black-pearl;
 
-  @include retina {
-    background-image: url("../../img/head/head@2x.jpg");
-  }
-
   @include vp-1023 {
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
       url("../../img/head/head-mobile.jpg") center/cover no-repeat,
       $black-pearl;
+  }
 
-    @include retina {
-      background-image: url("../../img/head/head-mobile@2x.jpg");
-    }
+  @media (min-resolution: $retina-dpi) and (min-width: $vp-1024),
+    (min-resolution: $retina-dppx) and (min-width: $vp-1024) {
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../../img/head/head@2x.jpg") center/cover no-repeat,
+      $black-pearl;
+  }
+
+  @media (min-resolution: $retina-dpi) and (max-width: ($vp-1024 - 1px)),
+    (min-resolution: $retina-dppx) and (max-width: ($vp-1024 - 1px)) {
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../../img/head/head-mobile@2x.jpg") center/cover no-repeat,
+      $black-pearl;
   }
 }
 
