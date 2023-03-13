@@ -1779,50 +1779,82 @@ button,
   row-gap: 20px;
 }
 
+.form__item {
+  position: relative;
+}
+
+.form__item .input-message {
+  position: absolute;
+  bottom: 100%;
+  z-index: 50;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffff00;
+}
+
 .form__item--checkbox {
   -ms-grid-column-align: center;
   justify-self: center;
 }
 
-.form input,
+.form input:not([type=checkbox]),
 .form textarea {
   display: block;
   width: 100%;
   padding: 15px;
-  background: rgba(4, 24, 39, 0.15);
+  background-color: rgba(4, 24, 39, 0.15);
   color: inherit;
   border: none;
   border-radius: 3px;
 }
 
-.form input::-webkit-input-placeholder,
+.form input:not([type=checkbox])::-webkit-input-placeholder,
 .form textarea::-webkit-input-placeholder {
   color: inherit;
 }
 
-.form input::-moz-placeholder,
+.form input:not([type=checkbox])::-moz-placeholder,
 .form textarea::-moz-placeholder {
   color: inherit;
 }
 
-.form input:-ms-input-placeholder,
+.form input:not([type=checkbox]):-ms-input-placeholder,
 .form textarea:-ms-input-placeholder {
   color: inherit;
 }
 
-.form input::-ms-input-placeholder,
+.form input:not([type=checkbox])::-ms-input-placeholder,
 .form textarea::-ms-input-placeholder {
   color: inherit;
 }
 
-.form input::placeholder,
+.form input:not([type=checkbox])::placeholder,
 .form textarea::placeholder {
   color: inherit;
 }
 
-.form input.focus-visible:focus,
+.form input:not([type=checkbox]).focus-visible:focus,
 .form textarea.focus-visible:focus {
-  background: rgba(4, 24, 39, 0.6);
+  color: #041827;
+  background-color: #ffffff;
+}
+
+.form input:not([type=checkbox]).focus-visible:focus:-moz-placeholder-shown,
+.form textarea.focus-visible:focus:-moz-placeholder-shown {
+  color: inherit;
+  background-color: rgba(4, 24, 39, 0.6);
+}
+
+.form input:not([type=checkbox]).focus-visible:focus:-ms-input-placeholder,
+.form textarea.focus-visible:focus:-ms-input-placeholder {
+  color: inherit;
+  background-color: rgba(4, 24, 39, 0.6);
+}
+
+.form input:not([type=checkbox]).focus-visible:focus:placeholder-shown,
+.form textarea.focus-visible:focus:placeholder-shown {
+  color: inherit;
+  background-color: rgba(4, 24, 39, 0.6);
 }
 
 .form textarea {
@@ -1849,15 +1881,15 @@ button,
 }
 
 .form button.focus-visible:focus {
-  background-color: rgba(4, 24, 39, 0.6);
+  background-color: rgba(4, 24, 39, 0.8);
 }
 
 .form button.focus-visible:focus:active {
-  background-color: rgba(4, 24, 39, 0.3);
+  background-color: rgba(4, 24, 39, 0.6);
 }
 
 .form button:active {
-  background-color: rgba(4, 24, 39, 0.3);
+  background-color: rgba(4, 24, 39, 0.6);
 }
 
 /* 2 columns version */
@@ -2533,17 +2565,17 @@ button,
     transform: scale(0.98);
   }
 
-  .form input:hover:not(.focus-visible),
+  .form input:not([type=checkbox]):hover:not(.focus-visible),
   .form textarea:hover:not(.focus-visible) {
-    background: rgba(4, 24, 39, 0.3);
+    background-color: rgba(4, 24, 39, 0.3);
   }
 
   .form button:hover:not(.focus-visible) {
-    background-color: rgba(4, 24, 39, 0.6);
+    background-color: rgba(4, 24, 39, 0.8);
   }
 
   .form button:hover:not(.focus-visible):active {
-    background-color: rgba(4, 24, 39, 0.3);
+    background-color: rgba(4, 24, 39, 0.6);
   }
 
   .checkbox label:hover:not(.focus-visible) {

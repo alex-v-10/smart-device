@@ -17,16 +17,34 @@
   row-gap: 20px;
 }
 
+.form__item {
+  position: relative;
+}
+
+.form__item .input-message {
+  position: absolute;
+  bottom: 100%;
+  z-index: 50;
+  font-size: 14px;
+  line-height: 19px;
+  // max-height: 19px;
+  // padding: 10px;
+  color: $yellow;
+  // background-color: rgba($black-pearl, 0.15);
+  // border: 1px solid $black-pearl;
+  // border-radius: 6px;
+}
+
 .form__item--checkbox {
   justify-self: center;
 }
 
-.form input,
+.form input:not([type="checkbox"]),
 .form textarea {
   display: block;
   width: 100%;
   padding: 15px;
-  background: rgba($black-pearl, 0.15);
+  background-color: rgba($black-pearl, 0.15);
   color: inherit;
   border: none;
   border-radius: 3px;
@@ -36,11 +54,17 @@
   }
 
   @include hover {
-    background: rgba($black-pearl, 0.3);
+    background-color: rgba($black-pearl, 0.3);
   }
 
   @include focus {
-    background: rgba($black-pearl, 0.6);
+    color: $black-pearl;
+    background-color: $color-default-white;
+
+    &:placeholder-shown {
+      color: inherit;
+      background-color: rgba($black-pearl, 0.6);
+    }
   }
 }
 
@@ -67,15 +91,15 @@
   cursor: pointer;
 
   @include hover-focus {
-    background-color: rgba($black-pearl, 0.6);
+    background-color: rgba($black-pearl, 0.8);
 
     &:active {
-      background-color: rgba($black-pearl, 0.3);
+      background-color: rgba($black-pearl, 0.6);
     }
   }
 
   &:active {
-    background-color: rgba($black-pearl, 0.3);
+    background-color: rgba($black-pearl, 0.6);
   }
 }
 
