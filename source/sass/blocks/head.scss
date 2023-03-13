@@ -112,6 +112,10 @@
       background-color: $cerulean;
     }
   }
+
+  &:active {
+    background-color: $cerulean;
+  }
 }
 
 .head__link-text {

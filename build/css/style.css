@@ -784,6 +784,10 @@ button,
   opacity: 0.3;
 }
 
+.modal__close-btn:active {
+  opacity: 0.3;
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
@@ -1338,6 +1342,10 @@ button,
   opacity: 0.6;
 }
 
+.page-header__logo:active {
+  opacity: 0.6;
+}
+
 .page-header__list {
   margin: 45px 0 0;
   padding: 0;
@@ -1371,6 +1379,10 @@ button,
 }
 
 .page-header__link.focus-visible:focus:active {
+  opacity: 0.6;
+}
+
+.page-header__link:active {
   opacity: 0.6;
 }
 
@@ -1465,6 +1477,10 @@ button,
 }
 
 .head__link.focus-visible:focus:active {
+  background-color: #026593;
+}
+
+.head__link:active {
   background-color: #026593;
 }
 
@@ -1613,6 +1629,11 @@ button,
   background-color: #026593;
 }
 
+.about__button:active {
+  color: #f2f5f7;
+  background-color: #026593;
+}
+
 .about__button-text--closed {
   display: none;
 }
@@ -1672,6 +1693,12 @@ button,
 }
 
 .catalog__card.focus-visible:focus:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.catalog__card:active {
   -webkit-transform: scale(0.98);
   -ms-transform: scale(0.98);
   transform: scale(0.98);
@@ -1882,6 +1909,10 @@ button,
   background-color: rgba(4, 24, 39, 0.6);
 }
 
+.form button:active {
+  background-color: rgba(4, 24, 39, 0.6);
+}
+
 /* 2 columns version */
 
 .checkbox {
@@ -1944,6 +1975,115 @@ button,
   font-size: 14px;
   line-height: 16px;
   opacity: 0.8;
+}
+
+.footer {
+  padding: 55px 0;
+  color: #ffffff;
+  background-color: #041827;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.footer__intro {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: 0 80px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.footer__logo {
+  margin: 0 0 30px;
+  color: inherit;
+}
+
+.footer__title {
+  margin: 0 0 20px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer__block {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 375px;
+  flex: 0 1 375px;
+  margin-left: auto;
+}
+
+.footer__block:last-child {
+  margin-left: 30px;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.footer__item {
+  margin-bottom: 5px;
+}
+
+.footer__link {
+  display: block;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.socials__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.socials__link {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.socials__link svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
 }
 
 /* @mixin hover-focus {
@@ -2044,6 +2184,27 @@ button,
 
   .catalog__card--3 {
     background: url("../../img/catalog/catalog-3-desktop@2x.jpg") center/cover no-repeat, #026593;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer__block--wrap {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 470px;
+    flex: 0 1 470px;
+  }
+
+  .footer__block--wrap .footer__list {
+    max-height: 130px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .footer__block--wrap .footer__item {
+    width: 220px;
   }
 }
 
@@ -2205,6 +2366,10 @@ button,
   .contact-form__container {
     margin: 0;
     width: 100%;
+  }
+
+  .footer {
+    padding: 50px 0 65px;
   }
 }
 
@@ -2370,6 +2535,14 @@ button,
 
   .contact-form {
     padding: 50px 0 90px;
+  }
+
+  .footer {
+    padding: 35px 0;
+  }
+
+  .footer__container {
+    padding: 0;
   }
 }
 

@@ -110,6 +110,11 @@
       background-color: $cerulean;
     }
   }
+
+  &:active {
+    color: $alice-blue;
+    background-color: $cerulean;
+  }
 }
 
 .about__button-text {

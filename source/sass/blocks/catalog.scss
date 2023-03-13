@@ -83,6 +83,10 @@
       transform: scale(0.98);
     }
   }
+
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
 .catalog__card::before {
