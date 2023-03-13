@@ -19,24 +19,27 @@
 
 .form__item {
   position: relative;
+
+  &.is-invalid {
+    outline: 1px solid $yellow;
+    border-radius: 3px;
+  }
 }
 
 .form__item .input-message {
   position: absolute;
-  bottom: 100%;
+  top: 100%;
   z-index: 50;
-  font-size: 14px;
-  line-height: 19px;
-  // max-height: 19px;
-  // padding: 10px;
+  width: 100%;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 0 2px 0;
   color: $yellow;
-  // background-color: rgba($black-pearl, 0.15);
-  // border: 1px solid $black-pearl;
-  // border-radius: 6px;
 }
 
 .form__item--checkbox {
   justify-self: center;
+  align-self: center;
 }
 
 .form input:not([type="checkbox"]),
@@ -74,7 +77,6 @@
 }
 
 .form button {
-  margin-bottom: 5px;
   display: block;
   padding: 0 25px;
   min-width: 265px;
@@ -96,10 +98,6 @@
     &:active {
       background-color: rgba($black-pearl, 0.6);
     }
-  }
-
-  &:active {
-    background-color: rgba($black-pearl, 0.6);
   }
 }
 
@@ -129,7 +127,7 @@
     }
 
     .form__item--checkbox {
-      margin: 10px 0 0 10px;
+      margin: 0 0 0 10px;
     }
 
     textarea {
@@ -137,7 +135,6 @@
     }
 
     button {
-      margin-bottom: 0;
       width: auto;
     }
   }

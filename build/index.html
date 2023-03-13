@@ -224,30 +224,31 @@
               <use xlink:href="img/sprite.svg#close"></use>
             </svg>
           </button>
-          <div class="form">
+          <div class="form" data-form-validate data-callback="base">
             <h2 class="form__title">Закажите звонок</h2>
-            <p class="form__description">Оставьте контакты, мы&nbsp;проконсультируем вас&nbsp;бесплатно в&nbsp;удобное время</p>
+            <p class="form__description">Оставьте контакты, мы&nbsp;проконсультируем вас&nbsp;бесплатно в&nbsp;удобное
+              время</p>
             <form action="https://echo.htmlacademy.ru/" method="post">
               <div class="form__grid">
-                <div class="form__item">
+                <div class="form__item" data-validate-type="text" data-required>
                   <label class="visually-hidden" for="name">Имя</label>
-                  <input type="text" name="name" id="name" placeholder="Имя" required>
+                  <input type="text" name="name" id="name" placeholder="Имя">
                 </div>
-                <div class="form__item">
+                <div class="form__item" data-validate-type="phone" data-required>
                   <label class="visually-hidden" for="phone">Телефон</label>
-                  <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+                  <input type="tel" name="phone" id="phone" placeholder="Телефон">
                 </div>
-                <div class="form__item form__item--textarea">
+                <div class="form__item form__item--textarea" data-validate-type="text">
                   <label class="visually-hidden" for="question">Ваш вопрос</label>
                   <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
                 </div>
                 <div class="form__item">
                   <button type="submit">Задать вопрос</button>
                 </div>
-                <div class="form__item form__item--checkbox">
+                <div class="form__item form__item--checkbox" data-required data-validate-type="checkbox">
                   <span class="checkbox">
                     <label>
-                      <input type="checkbox" name="agree" checked required>
+                      <input type="checkbox" name="agree" checked>
                       <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
                       <span class="checkbox__mark"></span>
                     </label>

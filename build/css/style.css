@@ -776,6 +776,14 @@ button,
   color: inherit;
 }
 
+.modal__close-btn.focus-visible:focus {
+  opacity: 0.6;
+}
+
+.modal__close-btn.focus-visible:focus:active {
+  opacity: 0.3;
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
@@ -1330,10 +1338,6 @@ button,
   opacity: 0.6;
 }
 
-.page-header__logo:active {
-  opacity: 0.6;
-}
-
 .page-header__list {
   margin: 45px 0 0;
   padding: 0;
@@ -1367,10 +1371,6 @@ button,
 }
 
 .page-header__link.focus-visible:focus:active {
-  opacity: 0.6;
-}
-
-.page-header__link:active {
   opacity: 0.6;
 }
 
@@ -1465,10 +1465,6 @@ button,
 }
 
 .head__link.focus-visible:focus:active {
-  background-color: #026593;
-}
-
-.head__link:active {
   background-color: #026593;
 }
 
@@ -1617,11 +1613,6 @@ button,
   background-color: #026593;
 }
 
-.about__button:active {
-  color: #f2f5f7;
-  background-color: #026593;
-}
-
 .about__button-text--closed {
   display: none;
 }
@@ -1681,12 +1672,6 @@ button,
 }
 
 .catalog__card.focus-visible:focus:active {
-  -webkit-transform: scale(0.98);
-  -ms-transform: scale(0.98);
-  transform: scale(0.98);
-}
-
-.catalog__card:active {
   -webkit-transform: scale(0.98);
   -ms-transform: scale(0.98);
   transform: scale(0.98);
@@ -1783,18 +1768,28 @@ button,
   position: relative;
 }
 
+.form__item.is-invalid {
+  outline: 1px solid #ffff00;
+  border-radius: 3px;
+}
+
 .form__item .input-message {
   position: absolute;
-  bottom: 100%;
+  top: 100%;
   z-index: 50;
-  font-size: 14px;
-  line-height: 19px;
+  width: 100%;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 0 2px 0;
   color: #ffff00;
 }
 
 .form__item--checkbox {
   -ms-grid-column-align: center;
   justify-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .form input:not([type=checkbox]),
@@ -1863,7 +1858,6 @@ button,
 }
 
 .form button {
-  margin-bottom: 5px;
   display: block;
   padding: 0 25px;
   min-width: 265px;
@@ -1888,10 +1882,6 @@ button,
   background-color: rgba(4, 24, 39, 0.6);
 }
 
-.form button:active {
-  background-color: rgba(4, 24, 39, 0.6);
-}
-
 /* 2 columns version */
 
 .checkbox {
@@ -1901,7 +1891,7 @@ button,
 
 .checkbox label {
   display: block;
-  padding-left: 25px;
+  padding: 10px 0 10px 25px;
 }
 
 .checkbox__mark {
@@ -2025,7 +2015,7 @@ button,
   }
 
   .form--static .form__item--checkbox {
-    margin: 10px 0 0 10px;
+    margin: 0 0 0 10px;
   }
 
   .form--static textarea {
@@ -2033,7 +2023,6 @@ button,
   }
 
   .form--static button {
-    margin-bottom: 0;
     width: auto;
   }
 }
@@ -2492,6 +2481,14 @@ button,
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .modal__close-btn:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .modal__close-btn:hover:not(.focus-visible):active {
+    opacity: 0.3;
   }
 
   .custom-select__item[aria-selected=true]:hover:not(.focus-visible) {

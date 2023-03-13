@@ -100,7 +100,7 @@ export class Validator {
     if (input.value.length >= +parent.dataset.phoneLength) {
       this._setItemValidState(parent, input);
     } else {
-      parent.dataset.messageBase = 'Заполните поле в формате +7\xA0(999)\xA0999\xA099\xA099';
+      parent.dataset.messageBase = 'Поле обязательно к заполнению';
       this._setItemInvalidState(parent, input);
       flag = false;
     }
@@ -112,7 +112,7 @@ export class Validator {
     if (input.checked) {
       this._setItemValidState(parent, input);
     } else {
-      parent.dataset.messageBase = 'Необходимо отметить';
+      parent.dataset.messageBase = 'Поле обязательно к заполнению';
       this._setItemInvalidState(parent, input);
       flag = false;
     }
