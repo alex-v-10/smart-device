@@ -1,8 +1,24 @@
 .checkbox {
   position: relative;
   display: block;
-  padding-left: 25px;
 }
+
+.checkbox label {
+  display: block;
+  padding-left: 25px;
+
+  @include hover {
+    cursor: pointer;
+
+    .checkbox__mark {
+      background-color: rgba($black-pearl, 0.3);
+    }
+  }
+}
+
+// .checkbox input:focus-visible ~ .checkbox__mark {
+//   outline: 3px solid $black-pearl;
+// }
 
 .checkbox__mark {
   position: absolute;
@@ -29,6 +45,12 @@
 
 .checkbox input {
   @include visually-hidden;
+
+  @include focus {
+    & ~ .checkbox__mark {
+      outline: 3px solid $black-pearl;
+    }
+  }
 }
 
 .checkbox input + span {

@@ -139,3 +139,17 @@
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
+
+@mixin interactive-1 {
+  @include hover-focus {
+    opacity: 0.8;
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

@@ -26,13 +26,21 @@
   display: block;
   width: 100%;
   padding: 15px;
-  background: rgba(4, 20, 39, 0.15);
+  background: rgba($black-pearl, 0.15);
   color: inherit;
   border: none;
   border-radius: 3px;
 
   &::placeholder {
     color: inherit;
+  }
+
+  @include hover {
+    background: rgba($black-pearl, 0.3);
+  }
+
+  @include focus {
+    background: rgba($black-pearl, 0.6);
   }
 }
 
@@ -56,6 +64,19 @@
   border-radius: 3px;
   color: inherit;
   background-color: $black-pearl;
+  cursor: pointer;
+
+  @include hover-focus {
+    background-color: rgba($black-pearl, 0.6);
+
+    &:active {
+      background-color: rgba($black-pearl, 0.3);
+    }
+  }
+
+  &:active {
+    background-color: rgba($black-pearl, 0.3);
+  }
 }
 
 /* 2 columns version */

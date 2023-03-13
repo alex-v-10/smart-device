@@ -105,9 +105,12 @@
     line-height: 40px;
   }
 
-  &:hover,
-  &:focus-visible {
+  @include hover-focus {
     background-color: $pacific-blue;
+
+    &:active {
+      background-color: $cerulean;
+    }
   }
 
   &:active {

@@ -1322,6 +1322,18 @@ button,
   color: inherit;
 }
 
+.page-header__logo.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.page-header__logo.focus-visible:focus:active {
+  opacity: 0.6;
+}
+
+.page-header__logo:active {
+  opacity: 0.6;
+}
+
 .page-header__list {
   margin: 45px 0 0;
   padding: 0;
@@ -1350,9 +1362,12 @@ button,
   align-items: center;
 }
 
-.page-header__link:hover,
-.page-header__link:focus-visible {
+.page-header__link.focus-visible:focus {
   opacity: 0.8;
+}
+
+.page-header__link.focus-visible:focus:active {
+  opacity: 0.6;
 }
 
 .page-header__link:active {
@@ -1380,13 +1395,8 @@ button,
   cursor: pointer;
 }
 
-.page-header__button:hover:not(:active),
-.page-header__button:focus-visible {
-  opacity: 0.8;
-}
-
-.page-header__button:active {
-  opacity: 0.6;
+.page-header__button.focus-visible:focus {
+  outline: 3px solid #00b2ff;
 }
 
 .head {
@@ -1450,9 +1460,12 @@ button,
   text-align: center;
 }
 
-.head__link:hover,
-.head__link:focus-visible {
+.head__link.focus-visible:focus {
   background-color: #019bdf;
+}
+
+.head__link.focus-visible:focus:active {
+  background-color: #026593;
 }
 
 .head__link:active {
@@ -1467,15 +1480,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.logo:hover,
-.logo:focus-visible {
-  opacity: 0.8;
-}
-
-.logo:active {
-  opacity: 0.6;
 }
 
 .logo__text {
@@ -1518,16 +1522,6 @@ button,
   padding: 40px 45px 35px;
   min-height: 300px;
   border-left: 5px solid #00b2ff;
-}
-
-.advantages__item:hover {
-  color: #f2f5f7;
-  background-color: #00b2ff;
-}
-
-.advantages__item:hover .advantages__icon,
-.advantages__item:hover .advantages__title {
-  color: #f2f5f7;
 }
 
 .advantages__icon {
@@ -1613,10 +1607,14 @@ button,
   cursor: pointer;
 }
 
-.about__button:hover,
-.about__button:focus-visible {
+.about__button.focus-visible:focus {
   color: #f2f5f7;
   background-color: #00b2ff;
+}
+
+.about__button.focus-visible:focus:active {
+  color: #f2f5f7;
+  background-color: #026593;
 }
 
 .about__button:active {
@@ -1677,10 +1675,15 @@ button,
   height: 650px;
 }
 
-.catalog__card:hover,
-.catalog__card:focus-visible {
+.catalog__card.focus-visible:focus {
   -webkit-box-shadow: 0 0 10px #00b2ff;
   box-shadow: 0 0 10px #00b2ff;
+}
+
+.catalog__card.focus-visible:focus:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 .catalog__card:active {
@@ -1786,7 +1789,7 @@ button,
   display: block;
   width: 100%;
   padding: 15px;
-  background: rgba(4, 20, 39, 0.15);
+  background: rgba(4, 24, 39, 0.15);
   color: inherit;
   border: none;
   border-radius: 3px;
@@ -1817,6 +1820,11 @@ button,
   color: inherit;
 }
 
+.form input.focus-visible:focus,
+.form textarea.focus-visible:focus {
+  background: rgba(4, 24, 39, 0.6);
+}
+
 .form textarea {
   height: 155px;
   margin-bottom: 10px;
@@ -1837,12 +1845,29 @@ button,
   border-radius: 3px;
   color: inherit;
   background-color: #041827;
+  cursor: pointer;
+}
+
+.form button.focus-visible:focus {
+  background-color: rgba(4, 24, 39, 0.6);
+}
+
+.form button.focus-visible:focus:active {
+  background-color: rgba(4, 24, 39, 0.3);
+}
+
+.form button:active {
+  background-color: rgba(4, 24, 39, 0.3);
 }
 
 /* 2 columns version */
 
 .checkbox {
   position: relative;
+  display: block;
+}
+
+.checkbox label {
   display: block;
   padding-left: 25px;
 }
@@ -1886,6 +1911,10 @@ button,
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
+}
+
+.checkbox input.focus-visible:focus ~ .checkbox__mark {
+  outline: 3px solid #041827;
 }
 
 .checkbox input + span {
@@ -2040,7 +2069,6 @@ button,
   }
 
   .page-header__link {
-    position: relative;
     width: 40px;
     height: 40px;
   }
@@ -2440,6 +2468,90 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .page-header__logo:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .page-header__logo:hover:not(.focus-visible):active {
+    opacity: 0.6;
+  }
+
+  .page-header__link:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .page-header__link:hover:not(.focus-visible):active {
+    opacity: 0.6;
+  }
+
+  .page-header__button:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .page-header__button:hover:not(.focus-visible):active {
+    opacity: 0.6;
+  }
+
+  .head__link:hover:not(.focus-visible) {
+    background-color: #019bdf;
+  }
+
+  .head__link:hover:not(.focus-visible):active {
+    background-color: #026593;
+  }
+
+  .advantages__item:hover:not(.focus-visible) {
+    color: #f2f5f7;
+    background-color: #00b2ff;
+  }
+
+  .advantages__item:hover:not(.focus-visible) .advantages__icon,
+  .advantages__item:hover:not(.focus-visible) .advantages__title {
+    color: #f2f5f7;
+  }
+
+  .about__button:hover:not(.focus-visible) {
+    color: #f2f5f7;
+    background-color: #00b2ff;
+  }
+
+  .about__button:hover:not(.focus-visible):active {
+    color: #f2f5f7;
+    background-color: #026593;
+  }
+
+  .catalog__card:hover:not(.focus-visible) {
+    -webkit-box-shadow: 0 0 10px #00b2ff;
+    box-shadow: 0 0 10px #00b2ff;
+  }
+
+  .catalog__card:hover:not(.focus-visible):active {
+    -webkit-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+
+  .form input:hover:not(.focus-visible),
+  .form textarea:hover:not(.focus-visible) {
+    background: rgba(4, 24, 39, 0.3);
+  }
+
+  .form button:hover:not(.focus-visible) {
+    background-color: rgba(4, 24, 39, 0.6);
+  }
+
+  .form button:hover:not(.focus-visible):active {
+    background-color: rgba(4, 24, 39, 0.3);
+  }
+
+  .checkbox label:hover:not(.focus-visible) {
+    cursor: pointer;
+  }
+
+  .checkbox label:hover:not(.focus-visible) .checkbox__mark {
+    background-color: rgba(4, 24, 39, 0.3);
   }
 }
 

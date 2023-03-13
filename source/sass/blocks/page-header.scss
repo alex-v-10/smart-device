@@ -44,6 +44,8 @@
       @include visually-hidden;
     }
   }
+
+  @include interactive-1;
 }
 
 .page-header__list {
@@ -84,19 +86,11 @@
   align-items: center;
 
   @include vp-1023 {
-    position: relative;
     width: 40px;
     height: 40px;
   }
 
-  &:hover,
-  &:focus-visible {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
+  @include interactive-1;
 }
 
 .page-header__link-icon {
@@ -134,12 +128,15 @@
     display: none;
   }
 
-  &:hover:not(:active),
-  &:focus-visible {
+  @include hover {
     opacity: 0.8;
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
-  &:active {
-    opacity: 0.6;
+  @include focus {
+    outline: 3px solid $deep-sky-blue;
   }
 }

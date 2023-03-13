@@ -76,9 +76,12 @@
     padding: 30px;
   }
 
-  &:hover,
-  &:focus-visible {
+  @include hover-focus {
     box-shadow: 0 0 10px $deep-sky-blue;
+
+    &:active {
+      transform: scale(0.98);
+    }
   }
 
   &:active {

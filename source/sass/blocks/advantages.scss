@@ -32,12 +32,12 @@
     padding: 30px 25px 35px;
   }
 
-  &:hover {
+  @include hover {
     color: $alice-blue;
     background-color: $deep-sky-blue;
 
-    & .advantages__icon,
-    & .advantages__title {
+    .advantages__icon,
+    .advantages__title {
       color: $alice-blue;
     }
   }
