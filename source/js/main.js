@@ -2,7 +2,6 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initTextDrops} from './modules/text-drop';
-// import {initAccordion} from './modules/accordion';
 import {initAccordions} from './modules/accordion/init-accordion';
 
 // const MOBILE_MEDIA = '(max-width:767px)';
@@ -28,8 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initTextDrops();
     initAccordions();
-    // initAccordion('footer', 2, MOBILE_MEDIA);
-    // initAccordion('footer-2', null, MOBILE_MEDIA);
   });
 });
 

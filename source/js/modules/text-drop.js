@@ -1,5 +1,7 @@
 // Init text block to open and close on button click.
-// [data-text-drop-content] contains amount of items to show.
+// [data-text-drop-content] contains amount of content items to show.
+
+const BASE_QUANTITY = 3;
 
 const closeContainer = (dropContainer, dropItems, itemsToShow) => {
   if (dropItems.length) {
@@ -25,28 +27,24 @@ const openContainer = (dropContainer, dropItems, itemsToShow) => {
 
 const dropContainers = document.querySelectorAll('[data-text-drop]');
 
-const onTextDropButtonClick = (event) => {
-  const currentDropContainer = event.target.closest('[data-text-drop]');
-  const currentDropContent = currentDropContainer.querySelector('[data-text-drop-content]');
-  const currentDropItems = currentDropContent.children;
-  const currentItemsToShow = currentDropContent.dataset.textDropContent || 2;
-
-  if (currentDropContainer.classList.contains('is-closed')) {
-    openContainer(currentDropContainer, currentDropItems, currentItemsToShow);
-  } else {
-    closeContainer(currentDropContainer, currentDropItems, currentItemsToShow);
-  }
-};
-
 const initTextDrops = () => {
   if (dropContainers.length) {
     for (let i = 0; i < dropContainers.length; i++) {
       const dropContainer = dropContainers[i];
       const dropContent = dropContainer.querySelector('[data-text-drop-content]');
       const dropItems = dropContent.children;
-      const itemsToShow = dropContent.dataset.textDropContent || 2;
+      const itemsToShow = dropContent.dataset.textDropContent || BASE_QUANTITY;
       const dropButton = dropContainer.querySelector('[data-text-drop-button]');
       closeContainer(dropContainer, dropItems, itemsToShow);
+
+      const onTextDropButtonClick = () => {
+        if (dropContainer.classList.contains('is-closed')) {
+          openContainer(dropContainer, dropItems, itemsToShow);
+        } else {
+          closeContainer(dropContainer, dropItems, itemsToShow);
+        }
+      };
+
       dropButton.addEventListener('click', onTextDropButtonClick);
     }
   }
