@@ -7,7 +7,7 @@ if (accordionElements.length) {
   for (let i = 0; i < accordionElements.length; i++) {
     accordionElements[i].classList.remove('accordion--active');
   }
-  accordionElements[INITIAL].classList.add('accordion--active');
+  (accordionElements[INITIAL] || accordionElements[0]).classList.add('accordion--active');
 }
 
 const onAccordionClick = (event) => {
