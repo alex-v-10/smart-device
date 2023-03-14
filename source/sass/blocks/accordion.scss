@@ -1,0 +1,21 @@
+@include vp-767 {
+  .accordion::after {
+    content: "\02795"; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: $color-default-white;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .accordion--active::after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+  .accordion--active + .accordion__panel {
+    display: block;
+  }
+
+  .accordion__panel {
+    display: none;
+  }
+}
