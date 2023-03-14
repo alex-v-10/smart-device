@@ -26,6 +26,13 @@
   }
 }
 
+.form__item--text,
+.form__item--textarea {
+  label {
+    @include visually-hidden;
+  }
+}
+
 .form__item .input-message {
   position: absolute;
   top: 100%;

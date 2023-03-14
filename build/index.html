@@ -180,16 +180,16 @@
               <p class="form__description">Мы проконсультируем Вас бесплатно</p>
               <form action="https://echo.htmlacademy.ru/" method="post">
                 <div class="form__grid">
-                  <div class="form__item" data-validate-type="text" data-required>
-                    <label class="visually-hidden" for="name">Имя</label>
+                  <div class="form__item form__item--text" data-validate-type="text" data-required>
+                    <label for="name">Имя</label>
                     <input type="text" name="name" id="name" placeholder="Имя">
                   </div>
-                  <div class="form__item" data-validate-type="phone" data-required>
-                    <label class="visually-hidden" for="phone">Телефон</label>
+                  <div class="form__item form__item--text" data-validate-type="phone" data-required>
+                    <label for="phone">Телефон</label>
                     <input type="tel" name="phone" id="phone" placeholder="Телефон">
                   </div>
                   <div class="form__item form__item--textarea" data-validate-type="text">
-                    <label class="visually-hidden" for="question">Ваш вопрос</label>
+                    <label for="question">Ваш вопрос</label>
                     <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
                   </div>
                   <div class="form__item">
@@ -255,52 +255,60 @@
             </ul>
           </div>
         </div>
-        <div class="footer__blocks">
-          <div class="footer__block footer__block--wrap">
-            <h2 class="footer__title" data-accordion = "footer">Разделы сайта</h2>
-            <div class="footer__panel">
-              <ul class="footer__list">
-                <li class="footer__item">
-                  <a class="footer__link" href="#">О Компании</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="#">Продукты</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="#">Производство печатных плат</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="#">Монтаж печатных плат</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="#">Комплектующие</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="#">Доставка</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="#">Контакты</a>
-                </li>
-              </ul>
+        <div class="footer__blocks" data-accordion="parent" data-destroy="(max-width: 767px)" data-single>
+          <div class="footer__block footer__block--wrap" data-accordion="element">
+            <div class="footer__title">
+              <button class="footer__button" data-accordion="button">Разделы сайта</button>
+            </div>
+            <div class="footer__panel" data-accordion="content">
+              <div class="footer__content-wrapper">
+                <ul>
+                  <li>
+                    <a href="#">О Компании</a>
+                  </li>
+                  <li>
+                    <a href="#">Продукты</a>
+                  </li>
+                  <li>
+                    <a href="#">Производство печатных плат</a>
+                  </li>
+                  <li>
+                    <a href="#">Монтаж печатных плат</a>
+                  </li>
+                  <li>
+                    <a href="#">Комплектующие</a>
+                  </li>
+                  <li>
+                    <a href="#">Доставка</a>
+                  </li>
+                  <li>
+                    <a href="#">Контакты</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="footer__block">
-            <h2 class="footer__title" data-accordion = "footer">Наш офис</h2>
-            <div class="footer__panel">
-              <ul class="footer__list">
-                <li class="footer__item">
-                  <a class="footer__link" href="#">г. Мытищи, Олимпийский проспект, д.10</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="tel:+74955894050">+7 (495) 589-40-50</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="tel:+79253895829">+7 (925) 389-58-29</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href="tel:+79253647813">+7 (925) 364-78-13</a>
-                </li>
-              </ul>
+          <div class="footer__block" data-accordion="element">
+            <div class="footer__title">
+              <button class="footer__button" data-accordion="button">Наш офис</button>
+            </div>
+            <div class="footer__panel" data-accordion="content">
+              <div class="footer__content-wrapper">
+                <ul>
+                  <li>
+                    <a href="#">г. Мытищи, Олимпийский проспект, д.10</a>
+                  </li>
+                  <li>
+                    <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+                  </li>
+                  <li>
+                    <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+                  </li>
+                  <li>
+                    <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -318,16 +326,16 @@
             </p>
             <form action="https://echo.htmlacademy.ru/" method="post">
               <div class="form__grid">
-                <div class="form__item" data-validate-type="text" data-required>
-                  <label class="visually-hidden" for="name">Имя</label>
+                <div class="form__item form__item--text" data-validate-type="text" data-required>
+                  <label for="name">Имя</label>
                   <input type="text" name="name" id="name" placeholder="Имя">
                 </div>
-                <div class="form__item" data-validate-type="phone" data-required>
-                  <label class="visually-hidden" for="phone">Телефон</label>
+                <div class="form__item form__item--text" data-validate-type="phone" data-required>
+                  <label for="phone">Телефон</label>
                   <input type="tel" name="phone" id="phone" placeholder="Телефон">
                 </div>
                 <div class="form__item form__item--textarea" data-validate-type="text">
-                  <label class="visually-hidden" for="question">Ваш вопрос</label>
+                  <label for="question">Ваш вопрос</label>
                   <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
                 </div>
                 <div class="form__item">
