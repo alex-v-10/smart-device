@@ -1,4 +1,4 @@
-.socials__list {
+.socials__list-wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -6,16 +6,20 @@
   gap: 15px;
 }
 
-.socials__link {
+.socials__list-wrapper a {
   position: relative;
   display: block;
   width: 40px;
   height: 40px;
 
   @include interactive-1;
+
+  span {
+    @include visually-hidden;
+  }
 }
 
-.socials__link svg {
+.socials__list-wrapper svg {
   position: absolute;
   top: 50%;
   left: 50%;

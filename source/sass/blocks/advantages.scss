@@ -10,7 +10,7 @@
   }
 }
 
-.advantages__list {
+.advantages__wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -23,7 +23,7 @@
   }
 }
 
-.advantages__item {
+.advantages__wrapper li {
   padding: 40px 45px 35px;
   min-height: 300px;
   border-left: 5px solid $deep-sky-blue;
@@ -36,14 +36,14 @@
     color: $alice-blue;
     background-color: $deep-sky-blue;
 
-    .advantages__icon,
-    .advantages__title {
+    svg,
+    h3 {
       color: $alice-blue;
     }
   }
 }
 
-.advantages__icon {
+.advantages__wrapper svg {
   margin-bottom: 20px;
   color: $deep-sky-blue;
 
@@ -53,7 +53,7 @@
   }
 }
 
-.advantages__title {
+.advantages__wrapper h3 {
   margin: 0 0 15px;
   color: $deep-sky-blue;
   font-family: $ff-roboto-condensed;
@@ -67,7 +67,7 @@
   }
 }
 
-.advantages__description {
+.advantages__wrapper p {
   margin: 0;
 
   @include vp-767 {

@@ -1,7 +1,7 @@
 .catalog {
   position: relative;
   z-index: 1;
-  padding: 70px 0 140px;
+  padding: 70px 0 120px;
   background-color: $black-pearl;
 
   @include vp-1023 {
@@ -13,8 +13,25 @@
   }
 }
 
+.catalog__container {
+  padding: 0;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include vp-1023 {
+    padding: 0 50px;
+  }
+
+  @include vp-767 {
+    padding: 0 25px;
+  }
+}
+
 .catalog__title {
   margin: 0 0 50px;
+  max-width: 1320px;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 36px;
@@ -29,6 +46,12 @@
 }
 
 .catalog__title-text {
+  padding: 0 50px;
+
+  @include vp-1023 {
+    padding: 0;
+  }
+
   &--mobile {
     display: none;
   }
@@ -42,20 +65,47 @@
   }
 }
 
-.catalog__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  gap: 7%;
+.catalog__list-wrapper {
+  overflow-x: auto;
+  overflow-y: visible;
+  width: 100%;
+  padding: 20px 0 20px;
 
   @include vp-1023 {
+    padding: 0;
+  }
+
+  &::-webkit-scrollbar {
+    height: 15px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $cerulean;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: rgba($cerulean, 0.8);
+  }
+}
+
+.catalog__list-wrapper ul {
+  margin: 0 auto;
+  padding: 0 50px;
+  width: max-content;
+  list-style: none;
+  display: flex;
+  gap: 85px;
+  justify-content: center;
+
+  @include vp-1023 {
+    padding: 0;
+    width: auto;
     flex-direction: column;
     gap: 30px;
   }
 }
 
-.catalog__item {
+.catalog__list-wrapper li {
   flex: 0 1 350px;
 
   @include vp-1023 {
@@ -68,8 +118,11 @@
   padding: 50px 40px;
   display: block;
   height: 650px;
+  width: 350px;
+  background-color: $cerulean;
 
   @include vp-1023 {
+    width: auto;
     padding: 40px 45px;
     height: 100%;
   }
@@ -91,9 +144,19 @@
   }
 }
 
+.catalog__card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .catalog__card::before {
   content: "";
   position: absolute;
+  z-index: 1;
   bottom: 0;
   right: 0;
   width: 60px;
@@ -108,7 +171,9 @@
   }
 }
 
-.catalog__card-text {
+.catalog__list-wrapper p {
+  position: relative;
+  z-index: 1;
   margin: 0;
   max-width: 230px;
   color: $color-default-white;
@@ -119,45 +184,5 @@
   @include vp-767 {
     font-size: 18px;
     line-height: 30px;
-  }
-}
-
-/* Background for cards */
-
-$cards: 1, 2, 3;
-
-@each $card in $cards {
-  $urlDesktop: "../../img/catalog/catalog-" + $card + "-desktop.jpg";
-  $urlDesktop2x: "../../img/catalog/catalog-" + $card + "-desktop@2x.jpg";
-  $urlTablet: "../../img/catalog/catalog-" + $card + "-tablet.jpg";
-  $urlTablet2x: "../../img/catalog/catalog-" + $card + "-tablet@2x.jpg";
-  $urlMobile: "../../img/catalog/catalog-" + $card + "-mobile.jpg";
-  $urlMobile2x: "../../img/catalog/catalog-" + $card + "-mobile@2x.jpg";
-
-  .catalog__card--#{$card} {
-    background: url($urlDesktop) center/cover no-repeat, $cerulean;
-
-    @include vp-1023 {
-      background: url($urlTablet) center/cover no-repeat, $cerulean;
-    }
-
-    @include vp-374 {
-      background: url($urlMobile) center/cover no-repeat, $cerulean;
-    }
-
-    @media (min-resolution: $retina-dpi) and (min-width: $vp-1024),
-      (min-resolution: $retina-dppx) and (min-width: $vp-1024) {
-      background: url($urlDesktop2x) center/cover no-repeat, $cerulean;
-    }
-
-    @media (min-resolution: $retina-dpi) and (min-width: $vp-375) and (max-width: ($vp-1024 - 1px)),
-      (min-resolution: $retina-dppx) and (min-width: $vp-375) and (max-width: ($vp-1024 - 1px)) {
-      background: url($urlTablet2x) center/cover no-repeat, $cerulean;
-    }
-
-    @media (min-resolution: $retina-dpi) and (max-width: ($vp-375 - 1px)),
-      (min-resolution: $retina-dppx) and (max-width: ($vp-375 - 1px)) {
-      background: url($urlMobile2x) center/cover no-repeat, $cerulean;
-    }
   }
 }

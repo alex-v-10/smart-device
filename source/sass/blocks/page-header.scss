@@ -25,6 +25,7 @@
 }
 
 .page-header__logo {
+  flex: 0 0 auto;
   margin-top: 30px;
   color: inherit;
 
@@ -39,14 +40,13 @@
   @include interactive-1;
 }
 
-.page-header__list {
-  margin: 45px 0 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
+.page-header__list-wrapper {
+  margin: 45px 10px 0;
+  flex: 0 0 480px;
 
   @include vp-1023 {
     margin: 20px 20px 0 0;
+    flex: 1 1 auto;
   }
 
   @include vp-767 {
@@ -54,23 +54,30 @@
   }
 }
 
-.page-header__item {
-  min-width: 225px;
+.page-header__list-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 10px;
 
   @include vp-1023 {
-    min-width: auto;
-  }
-
-  &:not(:last-child) {
-    margin-right: 30px;
-
-    @include vp-1023 {
-      margin-right: 20px;
-    }
+    justify-content: flex-end;
+    row-gap: 0;
   }
 }
 
-.page-header__link {
+.page-header__list-wrapper li {
+  flex: 0 0 225px;
+
+  @include vp-1023 {
+    flex: 0 0 auto;
+  }
+}
+
+.page-header__list-wrapper a {
   line-height: 18px;
   color: inherit;
   display: flex;
@@ -84,8 +91,9 @@
   @include interactive-1;
 }
 
-.page-header__link-icon {
+.page-header__list-wrapper svg {
   margin-right: 15px;
+  flex: 0 0 auto;
 
   @include vp-1023 {
     margin-right: 0;
@@ -93,7 +101,7 @@
   }
 }
 
-.page-header__link-text {
+.page-header__list-wrapper a span {
   @include vp-1023 {
     @include visually-hidden;
   }
@@ -102,6 +110,7 @@
 .page-header__button {
   margin: 35px 0 0;
   padding: 0 15px;
+  max-width: 300px;
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 14px;

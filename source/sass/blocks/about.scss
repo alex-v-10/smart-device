@@ -9,6 +9,7 @@
 .about__container {
   padding: 5px 0 0 250px;
   position: relative;
+  min-height: 320px;
 
   @include vp-1023 {
     padding: 0 0 0 180px;
@@ -16,6 +17,9 @@
 
   @include vp-767 {
     padding: 0;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   &::before {
@@ -37,7 +41,7 @@
   }
 }
 
-.about__container h2 {
+.about__content-wrapper h2 {
   margin: 0 0 15px;
   font-family: $ff-roboto-condensed;
   font-size: 36px;
@@ -50,7 +54,7 @@
   }
 }
 
-.about__container p {
+.about__content-wrapper p {
   margin: 0 0 20px 0;
 
   @include vp-767 {
@@ -80,7 +84,8 @@
   }
 
   @include vp-767 {
-    min-width: 130px;
+    margin-right: 110px;
+    flex: 1 1 auto;
     line-height: 35px;
   }
 

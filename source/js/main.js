@@ -4,8 +4,6 @@ import {Form} from './modules/form-validate/form';
 import {initTextDrops} from './modules/text-drop';
 import {initAccordions} from './modules/accordion/init-accordion';
 
-// const MOBILE_MEDIA = '(max-width:767px)';
-
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {

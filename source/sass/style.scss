@@ -2,8 +2,6 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-// Swiper 7.4.1
-// @import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -18,14 +16,9 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
 @import "blocks/modal";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
 @import "blocks/page-header.scss";
 @import "blocks/head.scss";
-@import "blocks/logo.scss";
 @import "blocks/advantages.scss";
 @import "blocks/about.scss";
 @import "blocks/catalog.scss";

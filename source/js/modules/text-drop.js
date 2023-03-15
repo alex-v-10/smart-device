@@ -1,6 +1,3 @@
-// Init text block to open and close on button click.
-// [data-text-drop-content] contains amount of content items to show.
-
 const BASE_QUANTITY = 3;
 
 const closeContainer = (dropContainer, dropItems, itemsToShow) => {
