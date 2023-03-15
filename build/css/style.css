@@ -1488,33 +1488,6 @@ button,
   display: none;
 }
 
-.logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.logo__text {
-  margin: 5px 0 0 15px;
-}
-
-.logo__title {
-  margin: 0 0 5px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 29px;
-}
-
-.logo__description {
-  margin: 0;
-  font-family: "Roboto", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  opacity: 0.7;
-}
-
 .advantages {
   padding: 120px 0;
 }
@@ -2530,25 +2503,6 @@ button,
 
   .page-header__logo {
     margin-top: 15px;
-  }
-
-  .page-header__logo .logo__icon {
-    width: 35px;
-    height: 35px;
-  }
-
-  .page-header__logo .logo__text {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    border: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
   }
 
   .page-header__list {
