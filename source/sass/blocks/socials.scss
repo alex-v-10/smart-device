@@ -11,6 +11,7 @@
   display: block;
   width: 40px;
   height: 40px;
+  user-select: none;
 
   @include interactive-1;
 

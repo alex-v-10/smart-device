@@ -1,5 +1,5 @@
 .form__title {
-  margin: 0 0 15px;
+  margin: 0 0 10px;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 30px;
@@ -7,9 +7,14 @@
 }
 
 .form__description {
-  margin: 0 0 40px;
-  font-size: 14px;
-  line-height: 19px;
+  margin: 0 0 32px;
+
+  .contact-form & {
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
 }
 
 .form__grid {
@@ -47,6 +52,16 @@
 .form__item--checkbox {
   justify-self: center;
   align-self: center;
+
+  @include vp-767 {
+    position: relative;
+    bottom: 5px;
+    left: 5px;
+  }
+
+  .modal & {
+    margin: -8px 0 0 -10px;
+  }
 }
 
 .form input:not([type="checkbox"]),
@@ -80,7 +95,12 @@
 
 .form textarea {
   height: 155px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  padding: 25px 15px;
+
+  @include vp-767 {
+    height: 180px;
+  }
 }
 
 .form button {
@@ -98,6 +118,11 @@
   color: inherit;
   background-color: $black-pearl;
   cursor: pointer;
+  user-select: none;
+
+  @include vp-767 {
+    min-width: auto;
+  }
 
   @include hover-focus {
     background-color: rgba($black-pearl, 0.8);
@@ -109,6 +134,10 @@
 
   &:active {
     background-color: rgba($black-pearl, 0.6);
+  }
+
+  .modal & {
+    margin-top: -8px;
   }
 }
 
@@ -123,8 +152,10 @@
 
     .form__description {
       margin: 0 0 35px;
-      font-size: 16px;
-      line-height: 22px;
+
+      @include vp-1023 {
+        margin: 0 0 20px;
+      }
     }
 
     .form__grid {
@@ -139,6 +170,10 @@
 
     .form__item--checkbox {
       margin: 0 0 0 10px;
+
+      @include vp-1023 {
+        margin: 0;
+      }
     }
 
     textarea {

@@ -31,12 +31,13 @@
 }
 
 .head__content {
-  margin: 305px 0 280px -125px;
+  margin: 305px 0 280px -260px;
   display: flex;
   flex-direction: column;
+  max-width: 720px;
 
   @include vp-1023 {
-    margin: 180px 0 205px;
+    margin: 180px 0 205px 0;
   }
 
   @include vp-767 {
@@ -45,7 +46,7 @@
 }
 
 .head__text-content h2 {
-  margin: 0 0 40px 0;
+  margin: 0 0 35px 0;
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 80px;
@@ -54,28 +55,30 @@
   text-transform: uppercase;
 
   @include vp-1023 {
-    margin-bottom: 0;
+    margin: 0;
     font-size: 64px;
     line-height: 75px;
   }
 
   @include vp-767 {
+    margin: 0 0 5px 0;
     font-size: 36px;
     line-height: 42px;
   }
 }
 
 .head__text-content p {
-  margin: 0 0 40px 0;
+  margin: 0 0 45px 0;
   font-weight: 400;
   font-size: 22px;
   line-height: 155%;
 
   @include vp-1023 {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 
   @include vp-767 {
+    margin: 0 0 45px 0;
     font-size: 14px;
   }
 }
@@ -93,6 +96,7 @@
   border-radius: 3px;
   text-transform: uppercase;
   text-align: center;
+  user-select: none;
 
   @include vp-1023 {
     margin-left: 45px;

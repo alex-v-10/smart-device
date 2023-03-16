@@ -27,7 +27,7 @@
 
 .footer__intro {
   flex: 0 0 auto;
-  margin: 0 60px 0 0;
+  margin: -5px 60px 0 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -49,6 +49,7 @@
 .footer__logo {
   margin: 0 0 30px;
   color: inherit;
+  user-select: none;
 
   @include vp-1023 {
     margin: 0;
@@ -59,6 +60,18 @@
   }
 
   @include interactive-1;
+}
+
+.footer__socials {
+  margin: 0 0 0 10px;
+
+  @include vp-1023 {
+    margin: -10px -5px 0 0;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
 }
 
 .footer__title {
@@ -111,29 +124,27 @@
 
 .footer__blocks {
   flex: 0 1 845px;
-  margin-left: auto;
+  margin: 0 0 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 
   @include vp-1023 {
     flex: 1 1 auto;
-    margin-left: 0;
-    grid-template-columns: 220px 320px;
+    margin: 0 15px 0 0;
     justify-content: space-between;
+    grid-template-columns: max-content   max-content;
   }
 
   @include vp-767 {
+    margin: 0;
     grid-template-columns: 1fr;
     gap: 0;
   }
 }
 
 .footer__block {
-  max-width: 345px;
-
   @include vp-767 {
-    max-width: none;
     padding: 0 25px 0;
     border-top: 1px solid $color-default-white;
   }
@@ -141,6 +152,14 @@
   &:last-child {
     @include vp-767 {
       border-bottom: 1px solid $color-default-white;
+    }
+  }
+
+  &:nth-child(2n) {
+    margin: 0 0 0 60px;
+
+    @include vp-1023 {
+      margin: 0;
     }
   }
 }
@@ -165,9 +184,14 @@
   gap: 10px;
   grid-template-columns: 1fr;
 
+  @include vp-1023 {
+    gap: 8px;
+  }
+
   @include vp-767 {
     margin: 0 auto;
     padding-bottom: 20px;
+    gap: 15px;
   }
 }
 

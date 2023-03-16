@@ -4,7 +4,7 @@ import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import csso from 'gulp-csso';
-import gcmq from 'gulp-group-css-media-queries';
+// import gcmq from 'gulp-group-css-media-queries';
 import rename from 'gulp-rename';
 
 const sass = gulpSass(dartSass);

@@ -1,4 +1,5 @@
 const BASE_QUANTITY = 3;
+const MEDIA = {mobile: '(max-width:767px)'};
 
 const closeContainer = (dropContainer, dropItems, itemsToShow) => {
   if (dropItems.length) {
@@ -31,17 +32,31 @@ const initTextDrops = () => {
       const dropContent = dropContainer.querySelector('[data-text-drop-content]');
       const dropItems = dropContent.children;
       const itemsToShow = dropContent.dataset.textDropContent || BASE_QUANTITY;
+      const hiddenMore = dropContent.querySelector('[data-hidden-more]');
       const dropButton = dropContainer.querySelector('[data-text-drop-button]');
+
       closeContainer(dropContainer, dropItems, itemsToShow);
+
+      const breakpoint = window.matchMedia(MEDIA[hiddenMore.dataset.hiddenMore]);
+      const breakpointChecker = () => {
+        if (breakpoint.matches && dropContainer.classList.contains('is-closed')) {
+          hiddenMore.style.display = 'none';
+        } else {
+          hiddenMore.style.display = 'block';
+        }
+      };
+      breakpoint.addEventListener('change', breakpointChecker);
+      breakpointChecker();
 
       const onTextDropButtonClick = () => {
         if (dropContainer.classList.contains('is-closed')) {
           openContainer(dropContainer, dropItems, itemsToShow);
+          hiddenMore.style.display = 'block';
         } else {
           closeContainer(dropContainer, dropItems, itemsToShow);
         }
+        breakpointChecker();
       };
-
       dropButton.addEventListener('click', onTextDropButtonClick);
     }
   }
