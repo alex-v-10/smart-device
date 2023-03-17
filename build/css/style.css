@@ -578,14 +578,6 @@ button,
   flex-grow: 1;
 }
 
-.rouble {
-  font-family: "Rouble", "Arial", sans-serif;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -616,13 +608,6 @@ button,
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-.no-transition {
-  /* stylelint-disable-next-line */
-  -webkit-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -1696,12 +1681,6 @@ button,
 
 [data-accordion=element].is-active > [data-accordion=content] {
   max-height: 100%;
-}
-
-[data-accordion=parent].no-transition [data-accordion=content] {
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
 }
 
 [data-accordion=content] {
