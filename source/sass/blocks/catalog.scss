@@ -108,6 +108,10 @@
   gap: 85px;
   justify-content: center;
 
+  @media (max-width: $vp-1320) {
+    gap: 5.3vw;
+  }
+
   @include vp-1023 {
     padding: 0;
     width: auto;
@@ -132,6 +136,12 @@
   width: 350px;
   background-color: $cerulean;
   user-select: none;
+
+  @include vp-1319 {
+    padding: 3.8vw 3vw;
+    width: 26.5vw;
+    height: 49.2vw;
+  }
 
   @include vp-1023 {
     width: auto;

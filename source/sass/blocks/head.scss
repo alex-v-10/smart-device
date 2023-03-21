@@ -36,6 +36,10 @@
   flex-direction: column;
   max-width: 720px;
 
+  @include vp-1319 {
+    margin: 305px 0 280px -19.7vw;
+  }
+
   @include vp-1023 {
     margin: 180px 0 205px 0;
   }
