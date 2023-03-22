@@ -33,10 +33,10 @@
     left: 0;
     width: 150px;
     height: 320px;
-    background: url("../../img/about/2022.png") center/contain no-repeat;
+    background: url("../img/about/2022.png") center/contain no-repeat;
 
     @include retina {
-      background: url("../../img/about/2022@2x.png") center/contain no-repeat;
+      background: url("../img/about/2022@2x.png") center/contain no-repeat;
     }
 
     @include vp-767 {

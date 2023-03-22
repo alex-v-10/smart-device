@@ -386,7 +386,7 @@ template {
 
 @font-face {
   font-family: "PT Mono";
-  src: url("../../fonts/PTMono-Regular.woff2") format("woff2"), url("../../fonts/PTMono-Regular.woff") format("woff");
+  src: url("../fonts/PTMono-Regular.woff2") format("woff2"), url("../fonts/PTMono-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -394,7 +394,7 @@ template {
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Regular.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -402,7 +402,7 @@ template {
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Bold.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -786,7 +786,7 @@ button,
 .page-header__list-wrapper {
   position: relative;
   left: 5px;
-  margin: 45px 20px 0;
+  margin: 45px 0 0;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 478px;
   flex: 0 0 478px;
@@ -874,9 +874,9 @@ button,
 
 .head {
   color: #f2f5f7;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/head/head.jpg") center/cover no-repeat, #041827;
-  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/head/head.jpg") center/cover no-repeat, #041827;
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/head/head.jpg") center/cover no-repeat, #041827;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/head/head.jpg") center/cover no-repeat, #041827;
+  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/head/head.jpg") center/cover no-repeat, #041827;
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/head/head.jpg") center/cover no-repeat, #041827;
 }
 
 .head__container {
@@ -1010,7 +1010,7 @@ button,
   left: 0;
   width: 150px;
   height: 320px;
-  background: url("../../img/about/2022.png") center/contain no-repeat;
+  background: url("../img/about/2022.png") center/contain no-repeat;
 }
 
 .about__title {
@@ -1205,7 +1205,7 @@ button,
   width: 60px;
   height: 60px;
   border-radius: 3px 0 0 0;
-  background: url("../../img/svg/arrow.svg") center no-repeat, #00b2ff;
+  background: url("../img/svg/arrow.svg") center no-repeat, #00b2ff;
 }
 
 .catalog__list-wrapper p {
@@ -1238,8 +1238,8 @@ button,
   transform: translateX(50%);
   width: 1920px;
   height: 100%;
-  background: url("../../img/svg/plane.svg") 350px 246px/510px auto no-repeat, -o-linear-gradient(311deg, #026593 0 633px, #00b2ff 633px 100%);
-  background: url("../../img/svg/plane.svg") 350px 246px/510px auto no-repeat, linear-gradient(139deg, #026593 0 633px, #00b2ff 633px 100%);
+  background: url("../img/svg/plane.svg") 350px 246px/510px auto no-repeat, -o-linear-gradient(311deg, #026593 0 633px, #00b2ff 633px 100%);
+  background: url("../img/svg/plane.svg") 350px 246px/510px auto no-repeat, linear-gradient(139deg, #026593 0 633px, #00b2ff 633px 100%);
 }
 
 .contact-form__container {
@@ -1772,9 +1772,9 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1024px), (-o-min-device-pixel-ratio: 3/2) and (min-width: 1024px), (min-resolution: 144dpi) and (min-width: 1024px), (min-resolution: 1.5dppx) and (min-width: 1024px) {
   .head {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/head/head@2x.jpg") center/cover no-repeat, #041827;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/head/head@2x.jpg") center/cover no-repeat, #041827;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/head/head@2x.jpg") center/cover no-repeat, #041827;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/head/head@2x.jpg") center/cover no-repeat, #041827;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/head/head@2x.jpg") center/cover no-repeat, #041827;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/head/head@2x.jpg") center/cover no-repeat, #041827;
   }
 }
 
@@ -1795,8 +1795,8 @@ button,
 
 @media (max-width: 1919px) {
   .contact-form::before {
-    background: url("../../img/svg/plane.svg") calc(350px + (510px - 26.56vw) / 2) 246px/26.56vw auto no-repeat, -o-linear-gradient(311deg, #026593 0 633px, #00b2ff 633px 100%);
-    background: url("../../img/svg/plane.svg") calc(350px + (510px - 26.56vw) / 2) 246px/26.56vw auto no-repeat, linear-gradient(139deg, #026593 0 633px, #00b2ff 633px 100%);
+    background: url("../img/svg/plane.svg") calc(350px + (510px - 26.56vw) / 2) 246px/26.56vw auto no-repeat, -o-linear-gradient(311deg, #026593 0 633px, #00b2ff 633px 100%);
+    background: url("../img/svg/plane.svg") calc(350px + (510px - 26.56vw) / 2) 246px/26.56vw auto no-repeat, linear-gradient(139deg, #026593 0 633px, #00b2ff 633px 100%);
   }
 }
 
@@ -1886,9 +1886,9 @@ button,
   }
 
   .head {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/head/head-mobile.jpg") center/cover no-repeat, #041827;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/head/head-mobile.jpg") center/cover no-repeat, #041827;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/head/head-mobile.jpg") center/cover no-repeat, #041827;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/head/head-mobile.jpg") center/cover no-repeat, #041827;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/head/head-mobile.jpg") center/cover no-repeat, #041827;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/head/head-mobile.jpg") center/cover no-repeat, #041827;
   }
 
   .head__content {
@@ -2068,9 +2068,9 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1023px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 1023px), (min-resolution: 144dpi) and (max-width: 1023px), (min-resolution: 1.5dppx) and (max-width: 1023px) {
   .head {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/head/head-mobile@2x.jpg") center/cover no-repeat, #041827;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/head/head-mobile@2x.jpg") center/cover no-repeat, #041827;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/head/head-mobile@2x.jpg") center/cover no-repeat, #041827;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/head/head-mobile@2x.jpg") center/cover no-repeat, #041827;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/head/head-mobile@2x.jpg") center/cover no-repeat, #041827;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../img/head/head-mobile@2x.jpg") center/cover no-repeat, #041827;
   }
 }
 
@@ -2487,6 +2487,6 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .about__container::before {
-    background: url("../../img/about/2022@2x.png") center/contain no-repeat;
+    background: url("../img/about/2022@2x.png") center/contain no-repeat;
   }
 }
