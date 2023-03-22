@@ -1,7 +1,7 @@
 .catalog {
   position: relative;
   z-index: 1;
-  padding: 70px 0 120px;
+  padding: 65px 0 140px;
   background-color: $black-pearl;
 
   @include vp-1023 {
@@ -14,37 +14,20 @@
 }
 
 .catalog__container {
-  padding: 0;
-  max-width: none;
   display: flex;
   flex-direction: column;
-
-  @include vp-1023 {
-    padding: 0 50px;
-  }
-
-  @include vp-767 {
-    padding: 0 25px;
-  }
 }
 
 .catalog__title {
-  margin: 0 0 30px 0;
-  width: $vp-1320;
+  margin: 0 0 53px;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   color: $color-default-white;
-  align-self: center;
   white-space: nowrap;
 
-  @include vp-1319 {
-    width: 100%;
-  }
-
   @include vp-1023 {
-    width: auto;
     margin: 0 0 35px;
     align-self: stretch;
     white-space: normal;
@@ -58,12 +41,6 @@
 }
 
 .catalog__title-text {
-  padding: 0 50px;
-
-  @include vp-1023 {
-    padding: 0;
-  }
-
   &--mobile {
     display: none;
   }
@@ -77,54 +54,23 @@
   }
 }
 
-.catalog__list-wrapper {
-  overflow-x: auto;
-  overflow-y: visible;
-  padding: 20px 0 20px;
-
-  @include vp-1023 {
-    padding: 0;
-  }
-
-  &::-webkit-scrollbar {
-    height: 15px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: $cerulean;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: rgba($cerulean, 0.8);
-  }
-}
-
 .catalog__list-wrapper ul {
-  margin: 0 auto;
-  padding: 0 50px;
-  width: max-content;
+  margin: 0;
+  padding: 0;
   list-style: none;
-  display: flex;
-  gap: 85px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  row-gap: 85px;
 
-  @media (max-width: $vp-1320) {
-    gap: 5.3vw;
+  @include vp-1319 {
+    row-gap: 6.4vw;
   }
 
   @include vp-1023 {
-    padding: 0;
     width: auto;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 30px;
-  }
-}
-
-.catalog__list-wrapper li {
-  flex: 0 1 350px;
-
-  @include vp-1023 {
-    flex: 0 1 250px;
   }
 }
 
@@ -146,7 +92,7 @@
   @include vp-1023 {
     width: auto;
     padding: 40px 45px;
-    height: 100%;
+    height: 250px;
   }
 
   @include vp-767 {

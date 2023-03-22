@@ -124,9 +124,9 @@
 
 .footer__blocks {
   flex: 0 1 845px;
-  margin: 0 0 0 auto;
+  margin: 5px 0 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(auto, 470px) minmax(250px, auto);
   gap: 30px;
 
   @include vp-1023 {
@@ -154,14 +154,6 @@
       border-bottom: 1px solid $color-default-white;
     }
   }
-
-  &:nth-child(2n) {
-    margin: 0 0 0 60px;
-
-    @include vp-1023 {
-      margin: 0;
-    }
-  }
 }
 
 .footer__block--wrap {
@@ -181,12 +173,8 @@
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 10px;
   grid-template-columns: 1fr;
-
-  @include vp-1023 {
-    gap: 8px;
-  }
+  gap: 8px;
 
   @include vp-767 {
     margin: 0 auto;
@@ -196,7 +184,6 @@
 }
 
 .footer__block a {
-  display: block;
   color: inherit;
   opacity: 0.7;
 
