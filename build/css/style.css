@@ -1269,8 +1269,8 @@ button,
   transform: translateX(50%);
   width: 1920px;
   height: 100%;
-  background: url("../img/svg/plane.svg") 350px 246px/510px auto no-repeat, -o-linear-gradient(311deg, #026593 0 635px, #00b2ff 635px 100%);
-  background: url("../img/svg/plane.svg") 350px 246px/510px auto no-repeat, linear-gradient(139deg, #026593 0 635px, #00b2ff 635px 100%);
+  background: url("../img/form/plane.png") 350px 246px/510px auto no-repeat, -o-linear-gradient(311deg, #026593 0 635px, #00b2ff 635px 100%);
+  background: url("../img/form/plane.png") 350px 246px/510px auto no-repeat, linear-gradient(139deg, #026593 0 635px, #00b2ff 635px 100%);
 }
 
 .contact-form__container {
@@ -1993,8 +1993,8 @@ button,
   }
 
   .contact-form::before {
-    background: url("../img/svg/plane.svg") calc(350px + (510px - 26.56vw) / 2) 246px/26.56vw auto no-repeat, -o-linear-gradient(311deg, #026593 0 635px, #00b2ff 635px 100%);
-    background: url("../img/svg/plane.svg") calc(350px + (510px - 26.56vw) / 2) 246px/26.56vw auto no-repeat, linear-gradient(139deg, #026593 0 635px, #00b2ff 635px 100%);
+    background: url("../img/form/plane.png") calc(350px + (510px - 26.56vw) / 2) 246px/26.56vw auto no-repeat, -o-linear-gradient(311deg, #026593 0 635px, #00b2ff 635px 100%);
+    background: url("../img/form/plane.png") calc(350px + (510px - 26.56vw) / 2) 246px/26.56vw auto no-repeat, linear-gradient(139deg, #026593 0 635px, #00b2ff 635px 100%);
   }
 }
 

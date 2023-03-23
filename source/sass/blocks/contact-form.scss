@@ -23,11 +23,11 @@
     transform: translateX(50%);
     width: $vp-1920;
     height: 100%;
-    background:url("../img/svg/plane.svg") 350px 246px/510px auto no-repeat,
+    background:url("../img/form/plane.png") 350px 246px/510px auto no-repeat,
       linear-gradient(139deg, $cerulean 0 635px, $deep-sky-blue 635px 100%);
 
     @include vp-1919 {
-      background:url("../img/svg/plane.svg") calc(350px + (510px - 26.56vw) / 2) 246px/26.56vw auto no-repeat,
+      background:url("../img/form/plane.png") calc(350px + (510px - 26.56vw) / 2) 246px/26.56vw auto no-repeat,
         linear-gradient(139deg, $cerulean 0 635px, $deep-sky-blue 635px 100%);
     }
 
