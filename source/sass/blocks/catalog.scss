@@ -76,27 +76,30 @@
 
 .catalog__card {
   position: relative;
-  padding: 50px 40px;
+  padding: 50px 40px 70px;
   display: block;
-  height: 650px;
+  min-height: 650px;
+  height: 100%;
   width: 350px;
   background-color: $cerulean;
   user-select: none;
 
   @include vp-1319 {
-    padding: 3.8vw 3vw;
+    padding: 3.8vw 3vw 70px;
     width: 26.5vw;
-    height: 49.2vw;
+    min-height: 49.2vw;
+    height: 100%;
   }
 
   @include vp-1023 {
     width: auto;
-    padding: 40px 45px;
-    height: 250px;
+    padding: 40px 70px 40px 45px;
+    min-height: 250px;
+    height: 100%;
   }
 
   @include vp-767 {
-    padding: 30px;
+    padding: 30px 50px 30px 30px;
   }
 
   @include hover-focus {
@@ -144,7 +147,6 @@
   position: relative;
   z-index: 1;
   margin: 0;
-  max-width: 230px;
   color: $color-default-white;
   font-family: $ff-roboto-condensed;
   font-size: 20px;
