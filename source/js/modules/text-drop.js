@@ -1,5 +1,4 @@
 const BASE_QUANTITY = 3;
-const MEDIA = {mobile: '(max-width:767px)'};
 
 const closeContainer = (dropContainer, dropItems, itemsToShow) => {
   if (dropItems.length) {
@@ -37,7 +36,7 @@ const initTextDrops = () => {
 
       closeContainer(dropContainer, dropItems, itemsToShow);
 
-      const breakpoint = window.matchMedia(MEDIA[hiddenMore.dataset.hiddenMore]);
+      const breakpoint = window.matchMedia(hiddenMore.dataset.hiddenMore);
       const breakpointChecker = () => {
         if (breakpoint.matches && dropContainer.classList.contains('is-closed')) {
           hiddenMore.style.display = 'none';
@@ -51,7 +50,6 @@ const initTextDrops = () => {
       const onTextDropButtonClick = () => {
         if (dropContainer.classList.contains('is-closed')) {
           openContainer(dropContainer, dropItems, itemsToShow);
-          hiddenMore.style.display = 'block';
         } else {
           closeContainer(dropContainer, dropItems, itemsToShow);
         }

@@ -23,6 +23,11 @@
       url("../img/head/head-mobile@2x.jpg") center/cover no-repeat,
       $black-pearl;
   }
+
+  @include vp-1023 {
+    position: relative;
+    bottom: 15px;
+  }
 }
 
 .head__container {
@@ -41,11 +46,11 @@
   }
 
   @include vp-1023 {
-    margin: 180px 0 205px 0;
+    margin: 95px 0 205px 0;
   }
 
   @include vp-767 {
-    margin: 150px 0 190px;
+    margin: 95px 0 190px;
   }
 }
 
@@ -114,17 +119,7 @@
     line-height: 16px;
   }
 
-  @include hover-focus {
-    background-color: $pacific-blue;
-
-    &:active {
-      background-color: $cerulean;
-    }
-  }
-
-  &:active {
-    background-color: $cerulean;
-  }
+  @include interactive-1;
 }
 
 .head__link-text {

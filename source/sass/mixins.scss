@@ -104,7 +104,10 @@
 
 @mixin interactive-1 {
   @include hover-focus {
-    opacity: 0.8;
+    background-color: $cerulean;
+    box-shadow: 0 0 10px $cerulean;
+    border-radius: 3px;
+    opacity: 1;
 
     &:active {
       opacity: 0.6;
@@ -112,6 +115,9 @@
   }
 
   &:active {
+    background-color: $cerulean;
+    box-shadow: 0 0 10px $cerulean;
+    border-radius: 3px;
     opacity: 0.6;
   }
 }

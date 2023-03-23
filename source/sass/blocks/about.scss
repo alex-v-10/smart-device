@@ -103,16 +103,18 @@
   @include hover-focus {
     color: $alice-blue;
     background-color: $deep-sky-blue;
+    box-shadow: 0 0 10px $cerulean;
 
     &:active {
-      color: $alice-blue;
-      background-color: $cerulean;
+      opacity: 0.6;
     }
   }
 
   &:active {
     color: $alice-blue;
-    background-color: $cerulean;
+    background-color: $deep-sky-blue;
+    box-shadow: 0 0 10px $cerulean;
+    opacity: 0.6;
   }
 }
 

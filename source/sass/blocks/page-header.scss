@@ -3,6 +3,10 @@
   width: 100%;
   z-index: 100;
   color: $alice-blue;
+
+  @include vp-1023 {
+    position: relative;
+  }
 }
 
 .page-header__inner {
@@ -81,6 +85,7 @@
 }
 
 .page-header__list-wrapper a {
+  width: fit-content;
   line-height: 18px;
   color: inherit;
   display: flex;
@@ -137,15 +142,5 @@
     display: none;
   }
 
-  @include hover {
-    opacity: 0.8;
-
-    &:active {
-      opacity: 0.6;
-    }
-  }
-
-  @include focus {
-    outline: 3px solid $deep-sky-blue;
-  }
+  @include interactive-1;
 }

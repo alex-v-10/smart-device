@@ -125,7 +125,7 @@
                   до&nbsp;10&nbsp;дней.
                 </p>
                 <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE,
-                  HOLGLITRONIC, REFOND. <span data-hidden-more="mobile">
+                  HOLGLITRONIC, REFOND. <span data-hidden-more="(max-width:767px)">
                     Печатные&nbsp;платы и&nbsp;комплектующие Service Devices применяются
                     на&nbsp;предприятиях
                     Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
@@ -229,9 +229,6 @@
                     <label for="question-modal">Ваш вопрос</label>
                     <textarea name="question" id="question-modal" placeholder="Ваш вопрос"></textarea>
                   </div>
-                  <div class="form__item">
-                    <button type="submit">Задать вопрос</button>
-                  </div>
                   <div class="form__item form__item--checkbox" data-required data-validate-type="checkbox">
                     <span class="checkbox">
                       <label>
@@ -240,6 +237,9 @@
                         <span class="checkbox__mark"></span>
                       </label>
                     </span>
+                  </div>
+                  <div class="form__item">
+                    <button type="submit">Задать вопрос</button>
                   </div>
                 </div>
               </form>
@@ -286,7 +286,8 @@
             </div>
           </div>
         </div>
-        <div class="footer__blocks" data-accordion="parent" data-destroy="(max-width: 767px)" data-single>
+        <div class="footer__blocks" data-accordion="parent" data-destroy="(max-width: 767px)"
+          data-focus="(max-width:767px)" data-single>
           <div class="footer__block footer__block--wrap" data-accordion="element">
             <div class="footer__title">
               <button class="footer__button" data-accordion="button">Разделы сайта</button>
@@ -365,9 +366,6 @@
                   <label for="question">Ваш вопрос</label>
                   <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
                 </div>
-                <div class="form__item">
-                  <button type="submit">Отправить</button>
-                </div>
                 <div class="form__item form__item--checkbox" data-required data-validate-type="checkbox">
                   <span class="checkbox">
                     <label>
@@ -376,6 +374,9 @@
                       <span class="checkbox__mark"></span>
                     </label>
                   </span>
+                </div>
+                <div class="form__item">
+                  <button type="submit">Отправить</button>
                 </div>
               </div>
             </form>

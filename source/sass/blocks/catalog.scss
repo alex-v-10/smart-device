@@ -95,7 +95,6 @@
     width: auto;
     padding: 40px 70px 40px 45px;
     min-height: 250px;
-    height: 100%;
   }
 
   @include vp-767 {
@@ -103,16 +102,18 @@
   }
 
   @include hover-focus {
-    box-shadow: 0 0 10px $deep-sky-blue;
+    box-shadow: 0 0 10px $cerulean;
 
     &:active {
       transform: scale(0.98);
+      opacity: 0.8;
     }
   }
 
   &:active {
-    box-shadow: 0 0 10px $deep-sky-blue;
+    box-shadow: 0 0 10px $cerulean;
     transform: scale(0.98);
+    opacity: 0.8;
   }
 }
 

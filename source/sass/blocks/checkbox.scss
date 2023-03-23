@@ -11,7 +11,7 @@
     cursor: pointer;
 
     .checkbox__mark {
-      background-color: rgba($black-pearl, 0.3);
+      background-color: $cerulean;
     }
   }
 }
@@ -44,7 +44,8 @@
 
   @include focus {
     & ~ .checkbox__mark {
-      outline: 3px solid $black-pearl;
+      outline: 2px solid $color-default-black;
+      background-color: $cerulean;
     }
   }
 }
