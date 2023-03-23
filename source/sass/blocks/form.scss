@@ -59,10 +59,6 @@
     bottom: 5px;
     left: 5px;
   }
-
-  .modal & {
-    margin: -8px 0 0 -10px;
-  }
 }
 
 .form input:not([type="checkbox"]),
@@ -155,28 +151,34 @@
   }
 
   @include interactive-1;
-
-  .modal & {
-    margin-top: -8px;
-  }
 }
 
 /* 2 columns version */
 
 .form--static {
+  @media (min-width: $vp-1024) {
+    .form__title {
+      margin: 0 0 10px -5px;
+    }
+
+    .form__description {
+      margin: 0 0 35px;
+    }
+
+    .form__item--checkbox {
+      margin: 0 0 0 10px;
+    }
+  }
+
   @media (min-width: $vp-768) {
     .form__title {
-      margin-left: -5px;
+      margin: 0 0 8px;
       font-size: 36px;
       line-height: 51px;
     }
 
     .form__description {
-      margin: 0 0 35px;
-
-      @include vp-1023 {
-        margin: 0 0 20px;
-      }
+      margin: 0 0 25px;
     }
 
     .form__grid {
@@ -190,11 +192,7 @@
     }
 
     .form__item--checkbox {
-      margin: 0 0 0 10px;
-
-      @include vp-1023 {
-        margin: 0;
-      }
+      margin: 0;
     }
 
     textarea {
@@ -204,5 +202,23 @@
     button {
       width: auto;
     }
+  }
+}
+
+.modal {
+  .form__title {
+    margin: -5px 0 5px;
+  }
+
+  .form__description {
+    margin: 0 0 40px;
+  }
+
+  .form textarea {
+    margin-bottom: 5px;
+  }
+
+  .form__item--checkbox {
+    margin: -10px 0 0 -10px;
   }
 }

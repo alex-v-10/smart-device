@@ -23,11 +23,6 @@
       url("../img/head/head-mobile@2x.jpg") center/cover no-repeat,
       $black-pearl;
   }
-
-  @include vp-1023 {
-    position: relative;
-    bottom: 15px;
-  }
 }
 
 .head__container {
@@ -46,11 +41,11 @@
   }
 
   @include vp-1023 {
-    margin: 95px 0 205px 0;
+    margin: 180px 0 205px;
   }
 
   @include vp-767 {
-    margin: 95px 0 190px;
+    margin: 150px 0 190px;
   }
 }
 
@@ -70,7 +65,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 5px 0;
+    margin: 0 0 10px 0;
     font-size: 36px;
     line-height: 42px;
   }
