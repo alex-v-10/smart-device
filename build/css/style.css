@@ -1889,6 +1889,7 @@ button,
   }
 
   .footer__block--wrap li {
+    min-height: 22px;
     max-width: 220px;
     min-width: 190px;
   }
