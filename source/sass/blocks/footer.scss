@@ -161,10 +161,6 @@
       min-height: 22px;
       max-width: 220px;
       min-width: 190px;
-
-      &:nth-child(4) {
-        break-before: avoid;
-      }
     }
   }
 }

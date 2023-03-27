@@ -1893,12 +1893,6 @@ button,
     max-width: 220px;
     min-width: 190px;
   }
-
-  .footer__block--wrap li:nth-child(4) {
-    -webkit-column-break-before: avoid;
-    -moz-column-break-before: avoid;
-    break-before: avoid;
-  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1024px), (-o-min-device-pixel-ratio: 3/2) and (min-width: 1024px), (min-resolution: 144dpi) and (min-width: 1024px), (min-resolution: 1.5dppx) and (min-width: 1024px) {
